@@ -1,12 +1,16 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
+const moment = require('moment');
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
-exports.run = async(client, message, args) => {
-  
-  if (message.deletable) message.delete()
-
-var manutenção = await db.get(`manutenção`)
+module.exports = {
+	name: 'roleinfo',
+	category: 'Info',
+	description: 'Displays information about a provided role.',
+	aliases: ['role', 'ri'],
+	usage: 'roleinfo <role>',
+	run: async (client, message, args) => {
+    
+       var manutenção = await db.get(`manutenção`)
   
     if(!manutenção === true){
 
@@ -21,25 +25,36 @@ var manutenção = await db.get(`manutenção`)
      return message.channel.send(mnt)
       
     } 
-  
-  if (!message.member.hasPermission(["MANAGE_ROLES", "ADMINISTRATOR"]))
-    return message.channel.send(
-      "<a:errado:753245066965024871> **|** Para executar esse comando você necessita da permissão de **MANAGE_ROLES** ou até mesmo **ADMINISTRADOR**."
-    );
-  let role =
-    message.guild.roles.cache.find(r => r.name == args[0]) ||
-    message.guild.roles.cache.find(r => r.id == args[0]) ||
-    message.mentions.roles.first() ||
-    args.join(" ");
-  if (!role) return message.reply("<a:errado:753245066965024871> **|** Mecione um cargo ou cole o ID do cargo.");
-  let embed = new Discord.MessageEmbed()
-    .setColor(`${role.hexColor}`)
-    .addField("ID", `${role.id}`, true)
-    .addField("Nome", "`" + `${role.name}` + "`", true)
-    .addField("Menção", `\`<@&${role.id}>\``, true)
-    .addField("Cor", `\`${role.hexColor}\``, true)
-    .addField(`Membros`, `${role.members.size}`, true)
-    .addField(`Posição`, `${role.position}`, true)
-    .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
-  message.channel.send(embed);
+    
+		const role = message.mentions.roles.first() || message.guild.roles.cache.get(args[0]);
+		if(!role) {
+			return message.channel.send(
+				'<a:errado:753245066965024871> **|** Mecione um cargo ou cole o ID do cargo.',
+			);
+		}
+
+		let permissions;
+		if(role.permissions.toArray().length !== 0) {
+			permissions = role.permissions.toArray().map(x => x.split('_').map(y => y[0] + y.slice(1).toLowerCase()).join(' ')).join(', ');
+		}
+		else {
+			permissions = 'None';
+		}
+		const embed = new Discord.MessageEmbed()
+			.setColor(role.hexColor)
+      .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
+			.setTitle(`${role.name} | Informações`)
+			.addField('Role Nome', `\`${role.name}\``, true)
+		  .addField('Role ID', `\`${role.id}\``, true)
+			.addField('Hex Cor', `\`${role.hexColor.toUpperCase()}\``)
+			.addField('Membros', `\`${role.members.size}\``, true)
+			.addField('Hoisted', `\`${role.hoist ? 'Sim' : 'Não'}\``, true)
+			.addField('Menção', `\`${role.mentionable ? 'Sim' : 'Não'}\``, true)
+			.addField('Criação', `\`${moment(role.createdTimestamp).format('MMMM Do YYYY, h:mm:ss')} | ${Math.floor((Date.now() - role.createdTimestamp) / 86400000)} dia(s)\``)
+			.addField('Permissões', [
+				`\`${permissions}\``,
+			]);
+
+		return message.channel.send(embed);
+	},
 };

@@ -149,7 +149,8 @@ message.delete();
      `<:SetaZu:765288356913086484> **Botinfo** - Veja informações do bot toda.\n` +
      `<:SetaZu:765288356913086484> **Traduzir** - Traduza algum texto com facilidade e rapidez.\n` +                
      `<:SetaZu:765288356913086484> **Steam** - Veja as informações do seu jogo preferido da plataforma Steam.\n` +
-     `<:SetaZu:765288356913086484> **Serfil** - Obtenha as informações sobre Séries e Filmes.\n` +                
+     `<:SetaZu:765288356913086484> **Serfil** - Obtenha as informações sobre Séries e Filmes.\n` +
+     `<:SetaZu:765288356913086484> **Pais** - Obtenha as informações de algum Páis.\n` +                            
      `<:SetaZu:765288356913086484> **Latencia** - Veja a latência da Asukie.\n` +            
      `<:SetaZu:765288356913086484> **Clima** - Veja o clima de alguma cidade.\n` + 
      `<:SetaZu:765288356913086484> **Roleinfo** - Veja as informações de algum cargo.\n` +               

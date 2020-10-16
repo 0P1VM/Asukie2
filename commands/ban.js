@@ -21,6 +21,10 @@ var manutenção = await db.get(`manutenção`)
       
     } 
 
+		let maior = new Discord.MessageEmbed()
+		.setDescription(`<a:Naoo:762794011614249021> **|** Eu não posso banir este usuário pois ele possuí um cargo maior que o meu!`)
+		.setColor(`#8500de`)
+
   let perm = new Discord.MessageEmbed()
     .setDescription(
       `<a:Bnao:746212123901820929> **|** Você não tem permissão para banir este usuário.`
@@ -58,10 +62,13 @@ var manutenção = await db.get(`manutenção`)
     return message.reply('Você não pode banir o usuário com a posse do servidor, bobinho.').then(m => {
       m.delete({ timeout: 9000 });
     });
+   if(membro.roles.highest.position >= message.member.roles.highest.position || message.author.id !== message.guild.owner.id) {
+      return message.channel.send(maior)
+    }
 
   var motivo = args.slice(1).join(" ");
   if (!motivo) motivo = "Motivo não inserido";
-
+if(membro.bannable) { 
   let cma = new Discord.MessageEmbed()
     .setAuthor(
       `Confirme a ação a seguir:`,
@@ -178,5 +185,9 @@ var manutenção = await db.get(`manutenção`)
 
   coletor2.on("collect", cp => {
     confirm_msg.delete();
-  });
+  })
+} else {
+      return message.channel.send(maior)
+    }  
+   return undefined
 };
