@@ -3,6 +3,7 @@ dependencies:
   canvas: 2.6.1
   cpu-stat: 2.0.1
   discord.js: 12.3.1
+  emoji-unicode: 2.0.1
   express: 4.17.1
   fs: 0.0.2
   fs-extra: 9.0.1
@@ -21,7 +22,6 @@ dependencies:
   parse-ms: 2.1.0
   quick.db: 7.1.2
   request: 2.88.2
-  request-promise-native: 1.0.9
   snekfetch: 4.0.4
   something-random-on-discord: 0.0.1
   steam-provider: 0.2.0
@@ -1056,6 +1056,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
+  /emoji-unicode/2.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-jjswgV5nR3KDqtC9ugzEOYQaBLLQP5hqaH2tiTBaq9maYpMnmvl9T+ogY3u2bN6O5NAP0Ddh9D+Meo7sfW/1uw==
   /encodeurl/1.0.2:
     dev: false
     engines:
@@ -2322,29 +2326,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-CkPTqq4egNuRngeuJUsoXZ4ce7U=
-  /request-promise-core/1.1.4:
-    dependencies:
-      lodash: 4.17.20
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    peerDependencies:
-      request: ^2.34
-    resolution:
-      integrity: sha512-TTbAfBBRdWD7aNNOoVOBH4pN/KigV6LyapYNNlAPA8JwbovRti1E88m3sYAwsLi5ryhPKsE9APwnjFTgdUjTpw==
-  /request-promise-native/1.0.9:
-    dependencies:
-      request-promise-core: 1.1.4
-      stealthy-require: 1.1.1
-      tough-cookie: 2.5.0
-    deprecated: 'request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142'
-    dev: false
-    engines:
-      node: '>=0.12.0'
-    peerDependencies:
-      request: ^2.34
-    resolution:
-      integrity: sha512-wcW+sIUiWnKgNY0dqCpOZkUbF/I+YPi+f09JZIDa39Ec+q82CpSYniDp+ISgTTbKmnpJWASeJBPZmoxH84wt3g==
   /request/2.88.2:
     dependencies:
       aws-sign2: 0.7.0
@@ -2526,12 +2507,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
-  /stealthy-require/1.1.1:
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
   /steam-provider/0.2.0:
     dependencies:
       cheerio: 1.0.0-rc.3
@@ -2941,6 +2916,7 @@ specifiers:
   canvas: ^2.6.1
   cpu-stat: ^2.0.1
   discord.js: ^12.3.1
+  emoji-unicode: ^2.0.1
   express: ^4.17.1
   fs: ^0.0.2
   fs-extra: ^9.0.1
@@ -2959,7 +2935,6 @@ specifiers:
   parse-ms: ^2.1.0
   quick.db: ^7.1.2
   request: ^2.88.2
-  request-promise-native: ^1.0.9
   snekfetch: ^4.0.4
   something-random-on-discord: ^0.0.1
   steam-provider: ^0.2.0

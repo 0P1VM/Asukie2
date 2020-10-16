@@ -2,10 +2,11 @@ const discord = require("discord.js");
 const { Random } = require("something-random-on-discord");
 const random = new Random();
 const db = require('quick.db')
+const c = require('../config.json')
 const b = require('../renegados/renegados.js')
 
 module.exports = {
-  name: "punch",
+  name: "soco",
   run: async (client, message, args) => {
     message.delete();
 
@@ -41,6 +42,11 @@ message.channel.send(renegado).then(m => {
 
     let user = message.mentions.users.first() || client.users.cache.get(args[0]);
     let data = await random.getAnimeImgURL("punch");
+    
+    if (!user) {
+return message.channel.send('<a:errado:753245066965024871> **|** Você está utilizando este comando de forma incorreta!\n' +
+`> **Exemplo:** ${c.prefix}soco <@!719944880800923690>`);
+}
     
 const embe = new discord.MessageEmbed()
     .setImage(data)
