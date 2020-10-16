@@ -9,20 +9,6 @@ moment.locale('pt-BR')
 exports.run = async (client, message, args) => {
 message.delete();
 
-var blacklist = ['']
-
-let renegado = new Discord.MessageEmbed()
-.setDescription(`<:Asukie_atencao:766406396337193020> **|** Desculpe, ${message.author} atualmente você foi inserido em minha \`blacklist\`\n` + 
-`Você não poderá utilizar nenhum comando enquando estiver nela!`)
-.setColor(`#0f4bff`)
-
-  if (![''].includes(message.author.id)) {
-    message.delete();
-message.channel.send(renegado).then(m => {
-        m.delete({ timeout: 9000 });
-      });
-    }
-
 var manutenção = await db.get(`manutenção`)
   
     if(!manutenção === true){

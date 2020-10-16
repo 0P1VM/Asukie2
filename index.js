@@ -5,8 +5,6 @@ const request = require("request");
 const db = require('quick.db');
 
 client.on("message", async message => {
-let blacklist = await db.fetch(`blacklist_${message.author.id}`)
-  if (blacklist === "Blacklisted") return message.reply("You are blacklisted from the bot!")
   if (message.author.bot) return;
   if (message.channel.type == "dm") return;
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
