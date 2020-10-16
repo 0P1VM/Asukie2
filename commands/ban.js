@@ -22,12 +22,12 @@ var manutenção = await db.get(`manutenção`)
     } 
 
 		let maior = new Discord.MessageEmbed()
-		.setDescription(`<a:Naoo:762794011614249021> **|** Eu não posso banir este usuário pois ele possuí um cargo maior que o meu!`)
+		.setDescription(`<a:errado:753245066965024871> **|** Eu não posso banir este usuário pois ele possuí um cargo maior que o meu!`)
 		.setColor(`#8500de`)
 
   let perm = new Discord.MessageEmbed()
     .setDescription(
-      `<a:Bnao:746212123901820929> **|** Você não tem permissão para banir este usuário.`
+      `<a:errado:753245066965024871> **|** Você não tem permissão para banir este usuário.`
     )
     .setColor(`#0f4bff`)
     .setFooter(

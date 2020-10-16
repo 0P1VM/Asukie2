@@ -111,6 +111,7 @@ message.delete();
  `<:SetaZu:765288356913086484> **Tapa** - De um tapa em alguém.\n` +
  `<:SetaZu:765288356913086484> **Deus** - Use o comando e veja oque deus nunca iria aceitar.\n` +                   
  `<:SetaZu:765288356913086484> **Japauau** - Use o comando e veja um programa japonês reagindo ao o que você escreveu.\n` +
+ `<:SetaZu:765288356913086484> **Supreme** - Use o comando e veja a logo da Supreme com oque você escreveu.\n` +                    
  `<:SetaZu:765288356913086484> **Hipocrisia** - Escreva algo pra aparecer no meme do "Enfim a hipocrisia".\n` +                    
  `<:SetaZu:765288356913086484> **Conquista** - Use o comando, e conquiste oque mais deseja.\n` +
  `<:SetaZu:765288356913086484> **Matar** - Mate alguém. **(Leve o comando na zoeira)**\n` +
