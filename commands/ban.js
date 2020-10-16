@@ -62,10 +62,6 @@ var manutenção = await db.get(`manutenção`)
     return message.reply('Você não pode banir o usuário com a posse do servidor, bobinho.').then(m => {
       m.delete({ timeout: 9000 });
     });
-   if(membro.roles.highest.position >= message.member.roles.highest.position || message.author.id !== message.guild.owner.id) {
-      return message.channel.send(maior)
-    }
-
   var motivo = args.slice(1).join(" ");
   if (!motivo) motivo = "Motivo não inserido";
 if(membro.bannable) { 

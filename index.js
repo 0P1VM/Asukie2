@@ -44,8 +44,8 @@ var tabela = [
       url: "https://www.twitch.tv/asukie"
     },
 	{
-		name: `Encontrou falhas? Reporte para o suporte.`,
-		type: "STREAMING",
+		name: `Encontrou falhas? use o comando ${config.prefix}bug e descreva-o.`,
+		type: "PLAYING",
 		url: "https://www.twitch.tv/asukie"
 	},
 	{

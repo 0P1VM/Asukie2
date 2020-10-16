@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 const Discord = require('discord.js');
 const db = require('quick.db')
 const b = require('../renegados/renegados.js')
+const c = require('../config.json')
 
 module.exports = {
     name: 'covid-19',
@@ -65,7 +66,7 @@ var manutenção = await db.get(`manutenção`)
 
                 message.channel.send(embed)
             }).catch(e => {
-                return message.channel.send('<a:errado:753245066965024871> **|** Esse Pais não existe ou não se encontra no meu banco de dados. [**Aviso:** O comando é em Inglês, então os Paises também são ex: ``Brazil, Japan`` etc]')
+                return message.channel.send('<a:errado:753245066965024871> **|** Esse Pais não existe ou não se encontra no meu banco de dados. \`a!convid mundo\` veja os casos mundias de Covid-19. [**Aviso:** O comando é em Inglês, então os Paises também são ex: ``Brazil, Japan`` etc]')
             })
         }
     }
