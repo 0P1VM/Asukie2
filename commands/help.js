@@ -1,5 +1,6 @@
 const Discord = require("discord.js")
 const c = require('../config.json')
+const b = require('../renegados/renegados.js')
 
 module.exports.run = async (client, message, args) => {
 message.delete();
@@ -9,13 +10,13 @@ message.delete();
     .setAuthor(`Asukie™ - ${c.v}`, client.user.displayAvatarURL({ dynamic:true }))
 	.setDescription(`\n**Links Importantes:\n` +
   `<:BlueSeta_:765293754637877268> [Me adicione em seu servidor](https://discord.com/api/oauth2/authorize?client_id=749044223692767302&permissions=8&scope=bot)\n` +
-  `<:BlueSeta_:765293754637877268> [Vote em mim no top.gg](https://top.gg/bot/749044223692767302/edit)\n` +
+  `<:BlueSeta_:765293754637877268> [Vote em mim no top.gg](https://top.gg/bot/749044223692767302)\n` +
   `<:BlueSeta_:765293754637877268> [Meu servidor de suporte](https://discord.gg/n5eNazJ)**`)
-	  .addField(`Opções:`, `**<a:um_:765292155165868092> | Administração | MANUTENÇÃO\n` +
-    `<a:dois_:765292512674971739> | Moderação | MANUTENÇÃO\n` +
-    `<a:tres_:765292551313162310> | Configuração | MANUTENÇÃO\n` +
-		`<a:quatro_:765292583273889832> | Interação | MANUTENÇÃO\n` +
-    `<a:cinco_:765292618275749889> | Utilidades | MANUTENÇÃO**`)
+	  .addField(`Opções:`, `**<a:um_:765292155165868092> | Administração\n` +
+    `<a:dois_:765292512674971739> | Moderação \n` +
+    `<a:tres_:765292551313162310> | Configuração \n` +
+		`<a:quatro_:765292583273889832> | Interação\n` +
+    `<a:cinco_:765292618275749889> | Utilidades**`)
     .setFooter(`Página 0 de 5 | Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
 	.setThumbnail(client.user.displayAvatarURL({ dynamic:true }))
 .setImage('https://i.imgur.com/rYKyIXl.png')
@@ -105,7 +106,6 @@ message.delete();
  `\n<:SetaZu:765288356913086484> **Cocegas** - Faça cócegas em algum amiguinho.\n` +
  `<:SetaZu:765288356913086484> **Primeiraspalavras** - Primeiras palavras de um bebê.\n` +
  `<:SetaZu:765288356913086484> **Kiss** - Beije seu crush.\n` +
- `<:SetaZu:765288356913086484> **Neko** - Veja melhores gifs de neko.\n` +
  `<:SetaZu:765288356913086484> **Ship** - Faça um ship de algum casal.\n` +
  `<:SetaZu:765288356913086484> **Cafune** - Faça um cafuné em algum amigo(a).\n` +
  `<:SetaZu:765288356913086484> **Tapa** - De um tapa em alguém.\n` +
@@ -118,6 +118,8 @@ message.delete();
  `<:SetaZu:765288356913086484> **Matar** - Mate alguém. **(Leve o comando na zoeira)**\n` +
  `<:SetaZu:765288356913086484> **Hackear** - "hackei" alguém. **(Leve o comando na zoeira)**\n` +
  `<:SetaZu:765288356913086484> **Duvida** - Deixa eu tirar uma dúvida sua.\n` +
+ `<:SetaZu:765288356913086484> **Soco** - De um soco em alguém chato.\n` +  
+ `<:SetaZu:765288356913086484> **Cry** - Chore pela crush.\n` +                    
  `<:SetaZu:765288356913086484> **Hug** - De um abraço em algum amigo(a).\n` +                                                        
  `<:SetaZu:765288356913086484> **Dado** - Jogue dado comigo.\n` +
  `<:SetaZu:765288356913086484> **Roletarussa** - Jogue roletarussa comigo.\n` +                   
@@ -148,6 +150,7 @@ message.delete();
      `<:SetaZu:765288356913086484> **Botinfo** - Veja informações do bot toda.\n` +
      `<:SetaZu:765288356913086484> **Traduzir** - Traduza algum texto com facilidade e rapidez.\n` +                
      `<:SetaZu:765288356913086484> **Steam** - Veja as informações do seu jogo preferido da plataforma Steam.\n` +
+     `<:SetaZu:765288356913086484> **Serfil** - Obtenha as informações sobre Séries e Filmes.\n` +                
      `<:SetaZu:765288356913086484> **Latencia** - Veja a latência da Asukie.\n` +            
      `<:SetaZu:765288356913086484> **Clima** - Veja o clima de alguma cidade.\n` + 
      `<:SetaZu:765288356913086484> **Roleinfo** - Veja as informações de algum cargo.\n` +               

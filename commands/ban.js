@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 const c = require("../config.json");
 const db = require("quick.db");
+const b = require('../renegados/renegados.js')
 
 exports.run = async (client, message, args) => {
   message.delete();
-
 var manutenção = await db.get(`manutenção`)
   
     if(!manutenção === true){
@@ -102,15 +102,15 @@ var manutenção = await db.get(`manutenção`)
       {
         name: "<:autorolymus:747042714725646336> **| Autor do Banimento:**",
         value:
-          `ㅤ<:nextgv:747044446851432449> **Tag:** \`${message.author.tag}\`\n` +
-          `ㅤ<:nextgv:747044446851432449> **ID:** \`${message.author.id}\``,
+          `ㅤ<:SetaZu:765288356913086484> **Tag:** \`${message.author.tag}\`\n` +
+          `ㅤ<:SetaZu:765288356913086484> **ID:** \`${message.author.id}\``,
         inline: true
       },
       {
         name: `<:user:736597556963836054> **| Usuário Banido:**`,
         value:
-          `ㅤ<:nextgv:747044446851432449> **Tag:** \`${membro.tag}\`\n` +
-          `ㅤ<:nextgv:747044446851432449> **ID:** \`${membro.id}\``,
+          `ㅤ<:SetaZu:765288356913086484> **Tag:** \`${membro.tag}\`\n` +
+          `ㅤ<:SetaZu:765288356913086484> **ID:** \`${membro.id}\``,
         inline: true
       },
       {
@@ -122,7 +122,7 @@ var manutenção = await db.get(`manutenção`)
   let membroban = new Discord.MessageEmbed()
     .setAuthor(
       `Você foi banido | Asukie™`,
-      "https://images-ext-2.discordapp.net/external/im9ATtqKCZRbYiLuwS12FRWrqjQsAnvc1gMKbYjXM64/https/cdn.discordapp.com/emojis/637125668601200640.gif"
+      "https://cdn.discordapp.com/emojis/766406396337193020.png?v=1"
     )
     .setThumbnail(
       `https://media.discordapp.net/attachments/618150447261417492/626945093923766284/giphy_1.gif?width=453&height=453`
@@ -131,13 +131,13 @@ var manutenção = await db.get(`manutenção`)
       {
         name: "<:autorolymus:747042714725646336> **| Autor do Banimento:**",
         value:
-          `ㅤ<:nextgv:747044446851432449> **Tag:** \`${message.author.tag}\`\n` +
-          `ㅤ<:nextgv:747044446851432449> **ID:** \`${message.author.id}\``,
+          `ㅤ<:SetaZu:765288356913086484> **Tag:** \`${message.author.tag}\`\n` +
+          `ㅤ<:SetaZu:765288356913086484> **ID:** \`${message.author.id}\``,
         inline: true
       },
       {
         name: "<:painel:737350900070350941> **| Servidor:**",
-        value: `ㅤ<:nextgv:747044446851432449> \`${message.guild.name}\``,
+        value: `ㅤ<:SetaZu:765288356913086484> \`${message.guild.name}\``,
         inline: true
       },
       {
@@ -151,14 +151,14 @@ var manutenção = await db.get(`manutenção`)
     .setColor(`#0f4bff`)
     .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
     .addField(
-      `<:user:736597556963836054> **| Usuário Banido:**`,
-      `ㅤ<:nextgv:747044446851432449> **Tag:** \`${membro.user.tag}\`\n` +
-        `ㅤ<:nextgv:747044446851432449> **ID:** \`${membro.id}\``
+      `<:SetaZu:765288356913086484> **| Usuário Banido:**`,
+      `ㅤ<:SetaZu:765288356913086484> **Tag:** \`${membro.user.tag}\`\n` +
+        `ㅤ<:SetaZu:765288356913086484> **ID:** \`${membro.id}\``
     )
     .addField(
       `<:autorolymus:747042714725646336> **| Autor do Banimento:**`,
-      `ㅤ<:nextgv:747044446851432449> **Tag:** \`${message.author.tag}\`\n` +
-        `ㅤ<:nextgv:747044446851432449> **ID:** \`${message.author.id}\``
+      `ㅤ<:SetaZu:765288356913086484> **Tag:** \`${message.author.tag}\`\n` +
+        `ㅤ<:SetaZu:765288356913086484> **ID:** \`${message.author.id}\``
     )
     .addField(`<:notepad:735956294854377603> **| Motivo:**`, `ㅤ${motivo}`);
   coletor.on("collect", cp => {

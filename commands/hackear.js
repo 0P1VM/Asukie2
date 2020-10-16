@@ -2,9 +2,24 @@ const Discord = require('discord.js');
 const c = require('../config.json')
 const time = ""
 const db = require('quick.db')
+const b = require('../renegados/renegados.js')
 
 exports.run = async (client, message, args) => { 
 message.delete();
+
+var blacklist = ['752954404986159275']
+
+let renegado = new Discord.MessageEmbed()
+.setDescription(`<:Asukie_atencao:766406396337193020> **|** Desculpe, ${message.author} atualmente você foi inserido em minha \`blacklist\`\n` + 
+`Você não poderá utilizar nenhum comando enquando estiver nela!`)
+.setColor(`#0f4bff`)
+
+  if (!['752954404986159275'].includes(message.author.id)) {
+    message.delete();
+message.channel.send(renegado).then(m => {
+        m.delete({ timeout: 9000 });
+      });
+    } 
 
 var manutenção = await db.get(`manutenção`)
   
@@ -27,7 +42,7 @@ var manutenção = await db.get(`manutenção`)
   if (membro === message.member) return message.channel.send(`<a:errado:753245066965024871> **|** Você não pode hackear você mesmo!`);
   if (!message.guild.me.hasPermission("EMBED_LINKS")) return message.channel.send(`<a:errado:753245066965024871> **|** Eu não tenho a permissão de **EMBED_LINKS**!`);
 
-    var exemplos = ["Quem é aquele admin gostoso? Arruma o zap dele pra mim ai", "Não vai dar... Precisamos terminar...", "Vamo GF? rs", "Queria uma lolizinha :(", "Vai com calma que é minha primeira vez tá?", "Traveco é mó gostoso", "Tudo bem, mas agora eu sou lesbica", "Você tá muito linda hoje", "Vontade de uébi namorar com você", "O cara me gravou gemendo, que doente!", "Te amo..."]; 
+    var exemplos = ["Quem é aquele admin gostoso? Arruma o zap dele pra mim ai", "Não vai dar... Precisamos terminar...", "PUBG tá muito difícil", "Queria uma lolizinha :(", "Vai com calma que é minha primeira vez tá?", "Traveco é mó gostoso", "Tudo bem, mas agora eu sou lesbica", "Você tá muito linda hoje", "Vontade de uébi namorar com você", "Asukie muito Linda", "Te amo... Fofo.."]; 
 	var conexao = ["São Paulo", "Bahia", "Amazonas", "Rio de Janeiro", "Russia", "Lisboa", "Brasília", "Salvador", "Pará", "Pernambuco", "Minas Gerais", "Rio Grande do Sul", "Paraíba"]; 
     var resultado = Math.floor((Math.random() * exemplos.length)); 
 	var resultado1 = Math.floor((Math.random() * conexao.length)); 

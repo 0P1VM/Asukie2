@@ -1,10 +1,13 @@
 const Discord = require("discord.js");
+const { Random } = require("something-random-on-discord");
 const db = require('quick.db')
+const random = new Random()
 const b = require('../renegados/renegados.js')
 
-exports.run = async (client, message, args) => {
+module.exports = {
+  name: "cry",
+  run: async (client, message, args) => {
 message.delete();
-
 var blacklist = ['752954404986159275']
 
 let renegado = new Discord.MessageEmbed()
@@ -19,7 +22,8 @@ message.channel.send(renegado).then(m => {
       });
     } 
 
-var manutenção = await db.get(`manutenção`)
+
+    var manutenção = await db.get(`manutenção`)
   
     if(!manutenção === true){
 
@@ -35,13 +39,15 @@ var manutenção = await db.get(`manutenção`)
       
     } 
 
-    const number = Math.floor(Math.random() * 6) +1;
-
-    message.channel.send(`<a:Dado:764302636349915196> **|** O dado que você jogou caiu em: \`${number}\``)
-
+    let user = message.mentions.users.first() || client.users.cache.get(args[0]);
+    let data = await random.getAnimeImgURL("cry");
+    
+    let embed = new Discord.MessageEmbed()
+    .setDescription(`${message.author} **Não chore se não eu choro também** <:AsukieCry:762822476828508161>`)
+    .setImage(data)
+    .setColor("#0f4bff")
+    .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}));
+    
+    message.channel.send(embed)
 }
-
-exports.help = {
-    name: 'dado',
-    aliases: ['dice']
 }

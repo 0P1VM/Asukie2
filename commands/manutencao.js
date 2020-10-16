@@ -1,12 +1,13 @@
 const { MessageEmbed } = require('discord.js')
 const db = require ('quick.db')
 const c = require('../config.json')
+const b = require('../renegados/renegados.js')
 
 exports.run = async (client, message, args) => {
 message.delete();
 
     let embedDev = new MessageEmbed()
-    .setDescription("<a:errado:753245066965024871> **|** Apenas meus desenvolvedores podem utilizar este comando!")
+    .setDescription("<:Asukie_atencao:766406396337193020> **|** Apenas meus desenvolvedores podem utilizar este comando!")
 .setColor(`#0f4bff`)
     let embedDev1 = new MessageEmbed()
     .setDescription(`**Me informe o status para a manutenção.**\n` +
@@ -14,7 +15,7 @@ message.delete();
 .setColor(`#0f4bff`)
     if(!args[0]) return message.channel.send(embedDev1)
     
-    if (![c.owner].includes(message.author.id)) {
+    if (!['719944880800923690', '268403900355313674', '752954404986159275'].includes(message.author.id)) {
     return message.channel.send(embedDev)
         .then(msg => msg.delete({ timeout: 10000}))
     

@@ -4,22 +4,8 @@ const c = require('../config.json')
 const db = require('quick.db')
 const b = require('../renegados/renegados.js')
 
-exports.run = async (client, message, args) => {
+exports.run = async (client, message, args) => {  
 message.delete();
-
-var blacklist = ['752954404986159275']
-
-let renegado = new Discord.MessageEmbed()
-.setDescription(`<:Asukie_atencao:766406396337193020> **|** Desculpe, ${message.author} atualmente você foi inserido em minha \`blacklist\`\n` + 
-`Você não poderá utilizar nenhum comando enquando estiver nela!`)
-.setColor(`#0f4bff`)
-
-  if (!['752954404986159275'].includes(message.author.id)) {
-    message.delete();
-message.channel.send(renegado).then(m => {
-        m.delete({ timeout: 9000 });
-      });
-    } 
 
 var manutenção = await db.get(`manutenção`)
   
@@ -40,19 +26,19 @@ var manutenção = await db.get(`manutenção`)
  const {
         body
     } = await superagent
-        .get(`https://nekos.life/api/v2/img/hug`);
+        .get(`https://nekos.life/api/v2/img/kiss`);
 
 let user = message.mentions.users.first() || client.users.cache.get(args[0]);
 if (!user) {
 return message.channel.send('<a:Bnao:746212123901820929> **|** Você está utilizando este comando de forma incorreta!\n' +
-`> **Exemplo:** ${c.prefix}hug <@!749044223692767302>`);
+`> **Exemplo:** ${c.prefix}kiss <@!749044223692767302>`);
 }
 
 let avatar = message.author.displayAvatarURL({dynamic: true});
   const embed = new Discord.MessageEmbed()
         .setTitle('')
         .setColor('#0f4bff')
-        .setDescription(`<a:Borbo:761702886996312064> ${message.author} ** Abraçou** ${user}`)
+        .setDescription(`<a:Borbo:761702886996312064> ${message.author} **acabou de beijar** ${user}`)
         .setImage(body.url)
         .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}));
   await message.channel.send(embed).then(msg => {

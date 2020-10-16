@@ -4,10 +4,26 @@ const os = require('os')
 const moment = require("moment")
 const c = require('../config.json');
 const db = require('quick.db')
+const b = require('../renegados/renegados.js')
+
 moment.locale('pt-BR')
 
 exports.run = async (client, message, args) => {
 message.delete();
+
+var blacklist = ['752954404986159275']
+
+let renegado = new Discord.MessageEmbed()
+.setDescription(`<:Asukie_atencao:766406396337193020> **|** Desculpe, ${message.author} atualmente você foi inserido em minha \`blacklist\`\n` + 
+`Você não poderá utilizar nenhum comando enquando estiver nela!`)
+.setColor(`#0f4bff`)
+
+  if (![`${blacklist}`].includes(message.author.id)) {
+    message.delete();
+message.channel.send(renegado).then(m => {
+        m.delete({ timeout: 9000 });
+      });
+    } 
 
 var manutenção = await db.get(`manutenção`)
   
@@ -72,7 +88,7 @@ var manutenção = await db.get(`manutenção`)
    .setColor('#0f4bff')
    .setAuthor(`Painel de Informações`, client.user.displayAvatarURL())
    .setDescription(`Olá ${message.author} eu sou a ${client.user.username}, minha idade é um mistério para todos, mas já vi vários usuários criando hipóteses! Fui desenvolvido para ajudar em seu servidor, tenho sistemas de economia, moderação, entretenimento e segurança. Para saber mais sobre mim, olhe abaixo:`)
-   .addField(`<:it:761067994486800415> **| Informações Gerais:**`, `> Programadores: ${dev} & ${dev1}\n` +
+   .addField(`<:it:761067994486800415> **| Informações Gerais:**`, `> Programadores: ${dev1} & ${dev}\n` +
    `> Data de criação: \`${moment(client.user.createdAt).format('LL')}\`\n` +
    `> Data de entrada: \`${moment(client.user.joinedAt).format('LL')}\``)
    .addField(`<:ets:761068291941990400> **| Estatísticas:**`, `> Servidores: \`${client.guilds.cache.size}\`\n` +

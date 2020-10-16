@@ -125,7 +125,8 @@ let renegado = new Discord.MessageEmbed()
 message.channel.send(renegado).then(m => {
         m.delete({ timeout: 9000 });
       });
-    } 
+    }
+
 
 var manutenção = await db.get(`manutenção`)
   

@@ -4,7 +4,9 @@ const client = new Discord.Client();
 const request = require("request");
 const db = require('quick.db');
 
-client.on("message", message => {
+client.on("message", async message => {
+let blacklist = await db.fetch(`blacklist_${message.author.id}`)
+  if (blacklist === "Blacklisted") return message.reply("You are blacklisted from the bot!")
   if (message.author.bot) return;
   if (message.channel.type == "dm") return;
   if (!message.content.toLowerCase().startsWith(config.prefix)) return;
@@ -13,7 +15,9 @@ client.on("message", message => {
     message.content.startsWith(`<@!${client.user.id}>`)
   )
     return;
-
+  let embed = new Discord.MessageEmbed()
+  .setDescription(`<:Asukie_atencao:766406396337193020> **|** O comando não existe, utilize \`${config.prefix}ajuda\` para mais informações.`)
+  .setColor("#0f4bff")
   const args = message.content
     .trim()
     .slice(config.prefix.length)
@@ -26,6 +30,10 @@ client.on("message", message => {
   } catch (err) {
     console.error(err);
     message.delete();
+  message.channel.send(embed)
+    
+
+    
   }
 })
 

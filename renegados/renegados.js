@@ -1,0 +1,1 @@
+var blacklist = [''] //usuários que não poderam utilizar a asukie!!!//tira o meu id eu tô bugado inferno olha o chat de test
