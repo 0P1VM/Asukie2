@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const request = require("request");
 const db = require('quick.db');
 
+
 client.on("message", async message => {
   if (message.author.bot) return;
   if (message.channel.type == "dm") return;

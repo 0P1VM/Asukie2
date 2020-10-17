@@ -27,6 +27,7 @@ dependencies:
   steam-provider: 0.2.0
   superagent: 6.1.0
   table: 6.0.3
+  twemoji-parser: 13.0.0
   weather-js: 2.0.0
 packages:
   /@babel/runtime/7.12.1:
@@ -2688,6 +2689,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
+  /twemoji-parser/13.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-zMaGdskpH8yKjT2RSE/HwE340R4Fm+fbie4AaqjDa4H/l07YUmAvxkSfNl6awVWNRRQ0zdzLQ8SAJZuY5MgstQ==
   /type-is/1.6.18:
     dependencies:
       media-typer: 0.3.0
@@ -2913,4 +2918,5 @@ specifiers:
   steam-provider: ^0.2.0
   superagent: ^6.1.0
   table: ^6.0.3
+  twemoji-parser: ^13.0.0
   weather-js: ^2.0.0
