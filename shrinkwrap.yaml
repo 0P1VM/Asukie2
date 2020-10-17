@@ -23,6 +23,7 @@ dependencies:
   request: 2.88.2
   snekfetch: 4.0.4
   something-random-on-discord: 0.0.1
+  star-labs: 1.1.2
   steam-provider: 0.2.0
   superagent: 6.1.0
   table: 6.0.3
@@ -2469,6 +2470,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-HXXqVUq7+pcKeLqqZj6mHFUMvXtOJt1uoUx09pFW6011inTMxqI8BA8PM95myrIyyKwdnzjdFjLiE6KBPVtJIg==
+  /star-labs/1.1.2:
+    dev: false
+    resolution:
+      integrity: sha512-xby7RRDjNGFFfZmRsnaxeWxhXQVWX0NbXA5n5juw+aLspSIHNyhPG6HAqm9Fkbco2cqA9GIxC5UlTZRpCZmU3Q==
   /statuses/1.5.0:
     dev: false
     engines:
@@ -2904,6 +2909,7 @@ specifiers:
   request: ^2.88.2
   snekfetch: ^4.0.4
   something-random-on-discord: ^0.0.1
+  star-labs: ^1.1.0
   steam-provider: ^0.2.0
   superagent: ^6.1.0
   table: ^6.0.3

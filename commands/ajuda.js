@@ -114,7 +114,8 @@ message.delete();
  `<:SetaZu:765288356913086484> **Supreme** - Use o comando e veja a logo da Supreme com oque você escreveu.\n` +                    
  `<:SetaZu:765288356913086484> **Hipocrisia** - Escreva algo pra aparecer no meme do "Enfim a hipocrisia".\n` +                    
  `<:SetaZu:765288356913086484> **Conquista** - Use o comando, e conquiste oque mais deseja.\n` +
- `<:SetaZu:765288356913086484> **Matar** - Mate alguém. **(Leve o comando na zoeira)**\n` +
+  `<:SetaZu:765288356913086484> **Suicide** - "Se mate usando o comando. **(Leve o comando na zoeira, são apenas gif's de Animes)**\n` +                    
+ `<:SetaZu:765288356913086484> **Matar** - Mate alguém. **(Leve o comando na zoeira, são apenas gif's de Animes)**\n` +
  `<:SetaZu:765288356913086484> **Hackear** - "hackei" alguém. **(Leve o comando na zoeira)**\n` +
  `<:SetaZu:765288356913086484> **Duvida** - Deixa eu tirar uma dúvida sua.\n` +
  `<:SetaZu:765288356913086484> **Soco** - De um soco em alguém chato.\n` +  
