@@ -1,5 +1,7 @@
 const fetch = require('node-fetch');
-const { MessageEmbed } = require('discord.js');
+const Discord = require('discord.js');
+const b = require('../renegados/renegados.js')
+const db = require('quick.db')
 
 module.exports = {
 	name: 'pais',
@@ -7,6 +9,22 @@ module.exports = {
 	usage: 'pais <país>',
 	run: async (client, message, args) => {
     
+    var manutenção = await db.get(`manutenção`)
+  
+    if(!manutenção === true){
+
+    let mnt = new Discord.MessageEmbed()
+
+.setDescription(`**Olá, ${message.author}**\n` +
+                `\nNo momento fui enviada para outra galáxia\n` + 
+				`Em breve voltarei a responder por seus comandos.`)
+.setThumbnail('https://i.pinimg.com/originals/91/de/b5/91deb532d34761aaf73e43c758dc5446.png')
+.setColor(`#0f4bff`)
+      
+     return message.channel.send(mnt)
+      
+    } 
+
     
     
     
@@ -29,7 +47,7 @@ module.exports = {
 		}
 		try{
 			const data = response[0];
-			const embed = new MessageEmbed()
+			const embed = new Discord.MessageEmbed()
         .setColor('#0f4bff')
 				.setTitle(data.name)
         .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))

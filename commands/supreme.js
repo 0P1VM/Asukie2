@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const db = require('quick.db')
 const c = require('../config.json')
+const b = require('../renegados/renegados.js')
 
 module.exports = {
 	name: 'supreme',
