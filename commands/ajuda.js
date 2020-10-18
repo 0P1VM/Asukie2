@@ -108,6 +108,7 @@ message.delete();
  `<:SetaZu:765288356913086484> **Kiss** - Beije seu crush.\n` +
  `<:SetaZu:765288356913086484> **Ship** - Faça um ship de algum casal.\n` +
  `<:SetaZu:765288356913086484> **Cafune** - Faça um cafuné em algum amigo(a).\n` +
+ `<:SetaZu:765288356913086484> **Gay** - Veja a sua porcetagem de ser gay. **(Leve o comando na zoeira)**\n` +                    
  `<:SetaZu:765288356913086484> **Tapa** - De um tapa em alguém.\n` +
  `<:SetaZu:765288356913086484> **Deus** - Use o comando e veja oque deus nunca iria aceitar.\n` +                   
  `<:SetaZu:765288356913086484> **Japauau** - Use o comando e veja um programa japonês reagindo ao o que você escreveu.\n` +

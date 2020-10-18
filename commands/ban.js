@@ -59,11 +59,11 @@ var manutenção = await db.get(`manutenção`)
       m.delete({ timeout: 9000 });
     });
   if (membro === message.guild.owner)
-    return message.reply('Você não pode banir o usuário com a posse do servidor, bobinho.').then(m => {
+    return message.reply('<a:errado:753245066965024871> **|** Você não pode banir o usuário com a posse do servidor, bobinho.').then(m => {
       m.delete({ timeout: 9000 });
     });
   var motivo = args.slice(1).join(" ");
-  if (!motivo) motivo = "Motivo não inserido";
+  if (!motivo) motivo = "<a:errado:753245066965024871> **|** Motivo não inserido";
 if(membro.bannable) { 
   let cma = new Discord.MessageEmbed()
     .setAuthor(
