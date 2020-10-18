@@ -8,6 +8,7 @@ dependencies:
   fs-extra: 9.0.1
   imdb-api: 4.2.0
   jimp: 0.16.1
+  js-yaml: 3.14.0
   mal-scraper: 2.11.2
   mathjs: 7.5.1
   moment: 2.29.1
@@ -557,6 +558,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-5hYdAkZlcG8tOLujVDTgCT+uPX0VnpAH28gWsLfzpXYm7wP6mp5Q/gYyR7YQ0cKVJcXJnl3j2kpBan13PtQf6w==
+  /argparse/1.0.10:
+    dependencies:
+      sprintf-js: 1.0.3
+    dev: false
+    resolution:
+      integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
   /array-flatten/1.1.1:
     dev: false
     resolution:
@@ -1084,6 +1091,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-nV5aVWW1K0wEiUIEdZ4erkGGH8mDxGyxSeqPzRNtWP7ataw+/olFObw7hujFWlVjNsaDFw5VZ5NzVSIqRgfTiw==
+  /esprima/4.0.1:
+    dev: false
+    engines:
+      node: '>=4'
+    hasBin: true
+    resolution:
+      integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
   /etag/1.8.1:
     dev: false
     engines:
@@ -1606,6 +1620,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-+az2gi/hvex7eLTMTlbRLOhH6P6WFdk2ITI8HJsaH2VqYO0I594zXSYEP+tf4FW+8Cy68ScDXoAsQdyQanv3sw==
+  /js-yaml/3.14.0:
+    dependencies:
+      argparse: 1.0.10
+      esprima: 4.0.1
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
   /js2xmlparser/4.0.1:
     dependencies:
       xmlcreate: 2.0.3
@@ -2454,6 +2476,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-2MLnlryu0VlINo+MNcDANR4vfWdFFDdi4Dkuk1rKjtc+MIO0JCFW/iRj4a1J+iAOyEx581OqBG9dn2jx2j4tKg==
+  /sprintf-js/1.0.3:
+    dev: false
+    resolution:
+      integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
   /sshpk/1.16.1:
     dependencies:
       asn1: 0.2.4
@@ -2899,6 +2925,7 @@ specifiers:
   fs-extra: ^9.0.1
   imdb-api: ^4.2.0
   jimp: ^0.16.1
+  js-yaml: ^3.14.0
   mal-scraper: ^2.11.2
   mathjs: ^7.5.1
   moment: ^2.29.1

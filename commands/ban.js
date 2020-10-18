@@ -21,10 +21,6 @@ var manutenção = await db.get(`manutenção`)
       
     } 
 
-		let maior = new Discord.MessageEmbed()
-		.setDescription(`<a:errado:753245066965024871> **|** Eu não posso banir este usuário pois ele possuí um cargo maior que o meu!`)
-		.setColor(`#8500de`)
-
   let perm = new Discord.MessageEmbed()
     .setDescription(
       `<a:errado:753245066965024871> **|** Você não tem permissão para banir este usuário.`
@@ -35,8 +31,7 @@ var manutenção = await db.get(`manutenção`)
       message.author.displayAvatarURL({ dynamic: true })
     );
 
-  var membro =
-    message.mentions.members.first() || client.users.cache.get(args[0]);
+  var membro = message.mentions.members.first() || client.users.cache.get(args[0]);
   if (!message.member.hasPermission("BAN_MEMBERS"))
     return message.channel.send(
       `<a:Bnao:746212123901820929> **|** Desculpe, ${message.author}. É necessário ter a permissão de **BAN_MEMBERS** para executar este comando!`
@@ -48,7 +43,7 @@ var manutenção = await db.get(`manutenção`)
   if (!membro)
     return message.channel
       .send(
-        `<a:Bnao:746212123901820929> | ${message.author} utilize o comando.\n` +
+        `<a:Bnao:746212123901820929> **|** ${message.author} utilize o comando.\n` +
           `> **Exemplo:** ${c.prefix}ban @usuario motivo`
       )
       .then(m => {
@@ -182,8 +177,5 @@ if(membro.bannable) {
   coletor2.on("collect", cp => {
     confirm_msg.delete();
   })
-} else {
-      return message.channel.send(maior)
-    }  
-   return undefined
-};
+}
+}
