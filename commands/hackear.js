@@ -28,8 +28,8 @@ var manutenção = await db.get(`manutenção`)
   if (membro === message.member) return message.channel.send(`<a:errado:753245066965024871> **|** Você não pode hackear você mesmo!`);
   if (!message.guild.me.hasPermission("EMBED_LINKS")) return message.channel.send(`<a:errado:753245066965024871> **|** Eu não tenho a permissão de **EMBED_LINKS**!`);
 
-    var exemplos = ["Quem é aquele admin gostoso? Arruma o zap dele pra mim ai", "Não vai dar... Precisamos terminar...", "PUBG tá muito difícil", "Queria uma lolizinha :(", "Vai com calma que é minha primeira vez tá?", "Traveco é mó gostoso", "Tudo bem, mas agora eu sou lesbica", "Você tá muito linda hoje", "Vontade de uébi namorar com você", "Asukie muito Linda", "Te amo... Fofo.."]; 
-	var conexao = ["São Paulo", "Bahia", "Amazonas", "Rio de Janeiro", "Russia", "Lisboa", "Brasília", "Salvador", "Pará", "Pernambuco", "Minas Gerais", "Rio Grande do Sul", "Paraíba"]; 
+    var exemplos = ["Quem é aquele admin gostoso? Arruma o zap dele pra mim ai", "Não vai dar... Precisamos terminar...", "PUBG tá muito difícil", "Queria uma lolizinha :(", "Vai com calma que é minha primeira vez tá?", "Traveco é mó gostoso", "Tudo bem, mas agora eu sou lesbica", "Você tá muito linda hoje", "Vontade de uébi namorar com você", "Asukie muito Linda", "Te amo... Fofo...", "Você aceitaria namorar comigo Jacinto?", "Eu gosto de Você Sábia?... canal muito bom rs", "Sim estou com AIDS, foi o Jacinto que me passou :("]; 
+	var conexao = ["São Paulo", "Bahia", "Amazonas", "Rio de Janeiro", "Russia", "Lisboa", "Brasília", "Salvador", "Pará", "Pernambuco", "Minas Gerais", "Rio Grande do Sul", "Paraíba", "Bahia", "Acre", "Alemanha", "Portugal", "Estados Unidos", "Cuba", "Senegal", "África do Sul", "Haiti", "Angola", "Canadá"]; 
     var resultado = Math.floor((Math.random() * exemplos.length)); 
 	var resultado1 = Math.floor((Math.random() * conexao.length)); 
   
