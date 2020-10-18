@@ -54,13 +54,13 @@ module.exports = {
 				.setThumbnail(`https://www.countryflags.io/${data.alpha2Code}/flat/64.png`)
         
 				.addFields(
-					{ name: 'Nome Nativo', value: `\`\`\`${data.nativeName}\`\`\``, inline: true },
-					{ name: 'Capital', value: `\`\`\`${data.capital ? data.capital : 'None'}\`\`\``, inline: true },
-					{ name: 'Continente', value: `\`\`\`${data.subregion ? data.subregion : data.region}\`\`\``, inline: true },
-					{ name: 'Moeda', value: `\`\`\`${data.currencies[0].symbol}\`\`\``, inline: true },
-					{ name: 'População', value: `\`\`\`${data.population.toLocaleString()}\`\`\``, inline: true },
-					{ name: 'Área', value: `\`\`\`${data.area.toLocaleString()}km\`\`\``, inline: true },
-					{ name: 'Linguagens', value: `\`\`\`${data.languages.map(lang => lang.name).join('/')}\`\`\`` },
+					{ name: 'Nome Nativo', value: `\`${data.nativeName}\``, inline: true },
+					{ name: 'Capital', value: `\`${data.capital ? data.capital : 'None'}\``, inline: true },
+					{ name: 'Continente', value: `\`${data.subregion ? data.subregion : data.region}\``, inline: true },
+					{ name: 'Moeda', value: `\`${data.currencies[0].symbol}\``, inline: true },
+					{ name: 'População', value: `\`${data.population.toLocaleString()}\``, inline: true },
+					{ name: 'Área', value: `\`${data.area.toLocaleString()}km\``, inline: true },
+					{ name: 'Linguagens', value: `\`${data.languages.map(lang => lang.name).join('/')}\`` },
 				);
 			message.channel.send(embed);
 		}

@@ -1,1 +1,1 @@
-var blacklist = ['alg']
+var blacklist = ['']
