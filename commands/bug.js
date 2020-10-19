@@ -1,5 +1,5 @@
 const { MessageEmbed } = require("discord.js")
-
+const b = require('../renegados/renegados.js')
 
 module.exports = {
   name: "bug",
