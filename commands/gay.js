@@ -27,9 +27,9 @@ var manutenção = await db.get(`manutenção`)
 
     message.channel.send(
         new Discord.MessageEmbed()
-        .setColor('#')
-        .setDescription(`${member} **sua porcentagem é \`${ran(0, 100)}%\` de ser gay!** <:Asukie_Frioo:767176226694627349>`)
-        .setImage('https://shangay.com/sites/default/files/gay__1__by_pride_flags-d8zu7qj.png')
+        .setColor('#0f4bff')
+        .setDescription(`${member} **Você está em dúvida? relaxa sua porcetagem é** \`${ran(0, 100)}%\` **de ser gay.** <:Asukie_Frioo:767176226694627349>`)
+        .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
     );
    
 }
