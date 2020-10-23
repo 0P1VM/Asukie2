@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const db = require('quick.db')
 const b = require('../renegados/renegados.js')
+const c = require("../config.json")
 
 module.exports = {
     name: 'kill',
@@ -37,9 +38,10 @@ var manutenção = await db.get(`manutenção`)
       
       var rand = list[Math.floor(Math.random() * list.length)];
       let user = message.mentions.users.first() || client.users.cache.get(args[0]);
-      if (!user) {
-
-      }
+if (!user) {
+return message.channel.send('<a:Bnao:746212123901820929> **|** Você está utilizando este comando de forma incorreta!\n' +
+`> **Exemplo:** ${c.prefix}matar \`<usuário>\``);
+}
       
       let avatar = message.author.displayAvatarURL({format: 'png'});
         const embed = new Discord.MessageEmbed()

@@ -3,6 +3,7 @@ const config = require("./config.json");
 const client = new Discord.Client();
 const request = require("request");
 const db = require('quick.db');
+const dbm = require('mongoose')
 
 
 client.on("message", async message => {
@@ -36,10 +37,15 @@ client.on("message", async message => {
   }
 })
 
-client.on("ready", () => {
+client.on("ready", async () => {
   console.log(`Iniciado em ${client.user.tag}\n\n`)
 var tabela = [
-      {
+  {
+      name: `Halloween 🎃`,
+      type: "WATCHING",
+      url: "https://www.twitch.tv/asukie"
+    },
+    {
       name: `Saiba como me adicionar pelo ${config.prefix}ajuda`,
       type: "STREAMING",
       url: "https://www.twitch.tv/asukie"
