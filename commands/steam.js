@@ -35,7 +35,9 @@ provider.search(arg).then(result => { //vai mostrar o resultado
                     .setThumbnail(other.imageUrl)
                     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
                     .setColor('#0f4bff')
-        message.channel.send(embed)
+        message.channel.send(embed).then(m => {
+m.delete({timeout: 20000})
+})
               })
     })
 })

@@ -144,11 +144,15 @@ var manutenção = await db.get(`manutenção`)
       .addField(`Texto traduzido:`, res.text)   
       .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}));
     
-    message.channel.send(embed)
+    message.channel.send(embed).then(m => {
+m.delete({timeout: 20000})
+})
   
 
   }).catch(err => {
     console.log(err)
-    message.channel.send('<a:errado:753245066965024871> **|** Desculpe mas essa lingua não existe, ou não se encontra no meu banco de dados.')
+    message.channel.send('<a:errado:753245066965024871> **|** Desculpe mas essa lingua não existe, ou não se encontra no meu banco de dados.').then(m => {
+m.delete({timeout: 20000})
+})
   })
 };

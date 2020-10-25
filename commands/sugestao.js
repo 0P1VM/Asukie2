@@ -5,7 +5,9 @@ exports.run = async (client, message, args) => {
 message.delete();
     let mensg = args.join(' ')
     if (!mensg) {
-        message.channel.send('<a:Asukie_Errado:767937012287537163> **|** Descreva a sugestão. [**Aviso:** \`Não abuse do comando ou será colocado na BlackList\`]')
+        message.channel.send('<a:Asukie_Errado:767937012287537163> **|** Descreva a sugestão. [**Aviso:** \`Não abuse do comando ou será colocado na BlackList\`]').then(m => {
+m.delete({timeout: 20000})
+})
         return undefined;
     }
 

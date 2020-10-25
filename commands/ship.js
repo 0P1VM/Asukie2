@@ -59,5 +59,7 @@ var manutenção = await db.get(`manutenção`)
                                 .setColor('#0f4bff')
                                 .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}));
                                 
-                                message.channel.send(embed)
+                                message.channel.send(embed).then(m => {
+m.delete({timeout: 20000})
+})
 }
