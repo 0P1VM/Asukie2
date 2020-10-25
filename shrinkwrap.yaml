@@ -8,10 +8,11 @@ dependencies:
   fs-extra: 9.0.1
   imdb-api: 4.2.0
   jimp: 0.16.1
+  lolis.life: 4.0.0
   mal-scraper: 2.11.2
   mathjs: 7.5.1
   moment: 2.29.1
-  mongoose: 5.10.9
+  mongoose: 5.10.10
   ms: 2.1.2
   nekos.life: 2.0.7
   node-fetch: 2.6.1
@@ -1722,6 +1723,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+  /lolis.life/4.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-OKahLGyU9lqY7YEq80BDzDCl16BKsc4LP5rF8HA/Ib3JOlF+AelBj0O8Aljr0OBJbL57LI5i+2QkfgKLswnwuQ==
   /lowercase-keys/1.0.1:
     dev: false
     engines:
@@ -1903,7 +1908,7 @@ packages:
       mongoose: '*'
     resolution:
       integrity: sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
-  /mongoose/5.10.9:
+  /mongoose/5.10.10:
     dependencies:
       bson: 1.1.5
       kareem: 2.3.1
@@ -1920,7 +1925,7 @@ packages:
     engines:
       node: '>=4.0.0'
     resolution:
-      integrity: sha512-7dkr1d6Uyk87hELzoc6B7Zo7kkPTx8rKummk51Y0je2V2Ttsw0KFPwTp1G8JIbBta7Wpw8j15PJi0d33Ode2nw==
+      integrity: sha512-KjCbWXTJ36RHMe0g31UG0/sANpJ9ekCIena7FkrCFlq5E9gJj/B2SgE5XQzIEiR1h4xMOVGKzyenCnyTw9UHZQ==
   /mpath/0.7.0:
     dev: false
     engines:
@@ -3029,10 +3034,11 @@ specifiers:
   fs-extra: ^9.0.1
   imdb-api: ^4.2.0
   jimp: ^0.16.1
+  lolis.life: ^4.0.0
   mal-scraper: ^2.11.2
   mathjs: ^7.5.1
   moment: ^2.29.1
-  mongoose: ^5.10.9
+  mongoose: ^5.10.10
   ms: ^2.1.2
   nekos.life: ^2.0.7
   node-fetch: ^2.6.1

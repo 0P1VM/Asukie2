@@ -5,6 +5,8 @@ const b = require('../renegados/renegados.js')
 
 exports.run = async (client, message, args) => {
   message.delete();
+
+
 var manutenção = await db.get(`manutenção`)
   
     if(!manutenção === true){
@@ -31,8 +33,17 @@ var manutenção = await db.get(`manutenção`)
       message.author.displayAvatarURL({ dynamic: true })
     );
 
-  var membro = message.mentions.members.first() || client.users.cache.get(args[0]);
-  if (!message.member.hasPermission("BAN_MEMBERS"))
+  let superior = new Discord.MessageEmbed()
+    .setDescription(
+      `<a:errado:753245066965024871> **|** Você não tem permissão para banir este usuário.`
+    )
+    .setColor(`#0f4bff`)
+    .setFooter(
+      `Requisitado: ${message.author.username}`,
+      message.author.displayAvatarURL({ dynamic: true })
+    );
+
+if (!message.member.hasPermission("BAN_MEMBERS"))
     return message.channel.send(
       `<a:Bnao:746212123901820929> **|** Desculpe, ${message.author}. É necessário ter a permissão de **BAN_MEMBERS** para executar este comando!`
     );
@@ -43,23 +54,55 @@ var manutenção = await db.get(`manutenção`)
   if (!membro)
     return message.channel
       .send(
-        `<a:Bnao:746212123901820929> **|** ${message.author} utilize o comando.\n` +
-          `> **Exemplo:** ${c.prefix}ban @usuario motivo`
+        `<a:Asukie_Errado:767937012287537163> **|** ${message.author} utilize o comando.\n` +
+          `> **Exemplo:** ${c.prefix}ban <@usuario> motivo`
       )
       .then(m => {
         m.delete({ timeout: 9000 });
       });
-  if (membro === message.member)
-    return message.channel.send(perm).then(m => {
-      m.delete({ timeout: 9000 });
-    });
-  if (membro === message.guild.owner)
-    return message.reply('<a:errado:753245066965024871> **|** Você não pode banir o usuário com a posse do servidor, bobinho.').then(m => {
-      m.delete({ timeout: 9000 });
-    });
   var motivo = args.slice(1).join(" ");
   if (!motivo) motivo = "<a:errado:753245066965024871> **|** Motivo não inserido";
-if(membro.bannable) { 
+
+let unkn = new Discord.MessageEmbed()
+.setDescription(`<a:Asukie_Errado:767937012287537163> **| O usuário mencionado não foi encontrado.**`)
+.setColor('#0f4bff')
+.setFooter('Requisitado por:' + message.author.username, message.author.displayAvatarURL({dynamic: true}))
+  var membro;
+    if (message.mentions.members.size > 0) {
+        if (/<@!?[\d]{18}>/.test(args[0]) && args[0].length <= 22) {
+            membro = message.mentions.members.first();
+        }
+    } else if (/[\d]{18}/.test(args[0]) && args[0].length === 18) {
+        membro = message.guild.members.cache.get(args[0]) || args[0];
+    } else {
+        message.channel.send(unkn).then(m => {
+m.delete({timeout: 15000})
+})
+        return 0;
+    }
+  
+
+    if (typeof membro !== "string") {
+        if (membro.id === message.guild.ownerID) {
+            message.channel.send('<a:Asukie_Errado:767937012287537163> **|** Você não pode banir o usuário com a posse do servidor, bobinho.')
+            return 0;
+        }
+        if (membro.id === client.user.id) {
+            message.channel.send('Você não pode utilizar este comando em mim.')
+            return 0;
+        }
+        let executorRole = message.member.highestRole;
+        let targetRole = membro.highestRole;
+        if (executorRole.comparePositionTo(targetRole) <= 0 && message.author.id !== message.guild.ownerID) {
+            message.channel.send(perm)
+            return 0;
+        }
+        let clientRole = message.guild.me.highestRole;
+        if (clientRole.comparePositionTo(targetRole) <= 0) {
+            message.reply("Não tenho permissão para banir este usúario");
+            return 0;
+        }
+    }
   let cma = new Discord.MessageEmbed()
     .setAuthor(
       `Confirme a ação a seguir:`,

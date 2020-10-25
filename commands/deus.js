@@ -28,10 +28,10 @@ var manutenção = await db.get(`manutenção`)
 
 
         if (message.content.split(' ').slice(1).join(' ').length < 1) {
-            message.channel.send('<a:errado:753245066965024871> **|** Você não escreveu nada.')
+            message.channel.send('<a:errado:753245066965024871> **|** Escreva algo após o comando.')
         } else {
-            if (message.content.split(' ').slice(1).join(' ').length > 50) {
-                message.channel.send('<a:errado:753245066965024871> **|** Você ultrapassou o limite de 50 caracteres. Você não quer uma edição feia ne?')
+            if (message.content.split(' ').slice(1).join(' ').length > 10) {
+                message.channel.send('<a:errado:753245066965024871> **|** Você ultrapassou o limite de 10 caracteres. Você não quer uma edição feia ne?')
             } else {
                 if (message.member.hasPermission('ATTACH_FILES')) {
                     var authorMessage = message

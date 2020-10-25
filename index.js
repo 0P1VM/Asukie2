@@ -20,7 +20,6 @@ let blacklistado = new Discord.MessageEmbed()
 .setDescription(`Você está proíbido de usar meus comandos.`)
 
 if (blockedUsers.includes(message.author.id) || (message.author.bot)) return message.delete();
-
   let embed = new Discord.MessageEmbed()
   .setDescription(`<:Asukie_atencao:766406396337193020> **|** O comando não existe, utilize \`${config.prefix}ajuda\` para mais informações.`)
   .setColor("#0f4bff")
@@ -29,7 +28,7 @@ if (blockedUsers.includes(message.author.id) || (message.author.bot)) return mes
     .slice(config.prefix.length)
     .split(/ +/g);
   const command = args.shift().toLowerCase();
-
+ const canal = client.channels.cache.get('769739393140260874').send(`${message.author} Utilizou o comando ${command}`)
   try {
     const commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, message, args);

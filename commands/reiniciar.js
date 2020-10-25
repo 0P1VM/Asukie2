@@ -1,9 +1,12 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
+  message.delete();
   
-  
-const owner = "268403900355313674"; //não muda ainda deixa eu testar
+var owner = [
+"268403900355313674", 
+"719944880800923690"
+]; 
     if (message.author.id === owner) {
         message.channel.send(`<a:Asukie_Certo:766437760381878282> | Ok, ${message.author}, Iniciando processo de reiniciação....`).then(m => {
 m.delete({timeout: 5000})

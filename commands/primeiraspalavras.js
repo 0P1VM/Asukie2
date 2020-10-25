@@ -24,12 +24,11 @@ var manutenção = await db.get(`manutenção`)
     } 
 
     if (message.content.split(' ').slice(1).join(' ').length < 1) {
-        message.channel.send('<a:errado:753245066965024871> **|** Você não escreveu nada.')
+        message.channel.send('<a:errado:753245066965024871> **|** Escreva algo para aparecer na primeira fala do bebê.')
     } else {
-        if (message.content.split(' ').slice(1).join(' ').length > 50) {
-            message.channel.send('<a:errado:753245066965024871> **|** Você ultrapassou o limite de 50 caracteres. Você não quer uma edição feia ne?')
+        if (message.content.split(' ').slice(1).join(' ').length > 20) {
+            message.channel.send('<a:errado:753245066965024871> **|** Você ultrapassou o limite de 20 caracteres. Você não quer uma edição feia ne?')
         } else {
-            if (message.member.hasPermission('ATTACH_FILES')) {
                 var authorMessage = message
                 message.channel.send('<a:loading:753391174202425364> **|** Processando...').then(message => {
                     Jimp.read(`https://cdn.discordapp.com/attachments/538711394137407488/567123894956457984/tirinha_baby.png`, function (err, image) {
@@ -47,12 +46,9 @@ var manutenção = await db.get(`manutenção`)
                         })
                     })
                 })
-            } else {
-                message.channel.send('<a:errado:753245066965024871> **|** Preciso da permissão **ATTACH_FILES** pra executar esse comando.')
             }
         }
     }
-}
 
 exports.help = {
     name: "primeiraspalavras",

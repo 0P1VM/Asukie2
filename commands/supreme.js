@@ -29,9 +29,12 @@ module.exports = {
 				`<a:errado:753245066965024871> **|** Você precisa escrever algo após o comando **ex:** \`${c.prefix}supreme <mensagem>\`.`,
 			);
 		}
-
+    
+    var authorMessage = message
+                message.channel.send('<a:loading:753391174202425364> **|** Processando...').then(m => {m.delete({timeout: 3000})
 		const image = `https://api.alexflipnote.dev/supreme?text=${args.join('%20')}`;
 		const attachment = new Discord.MessageAttachment(image, 'supreme.png');
 		message.channel.send(attachment);
 	},
-};
+)}
+                                                                                                 }

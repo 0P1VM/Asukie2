@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 const { guild } = require("../database.js");
 const ms = require("ms");
 
-module.exports = (client, message, args, prefix) => {
+exports.run = async (client, message, args, prefix) => {
     if (!message.member.hasPermission("MANAGE_ROLES", false, true, true)) {
         message.reply("Você não tem permissão para utilizar esse comando!");
         return 0;

@@ -42,12 +42,11 @@ var manutenção = await db.get(`manutenção`)
   
     let embed = new Discord.MessageEmbed()
     
-    .setDescription(`As respostas são aleatórias`)	
     .addField(`**Dúvida**`, `${duvida}`)
     .addField(`Resposta`, `${replies [result]}`)
     .setColor('#0f4bff')
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
-    .setThumbnail('https://cdn.discordapp.com/attachments/760597034138075158/763504895436783616/duvida-frequente.png')
+    .setThumbnail('https://cdn.discordapp.com/attachments/759155689733226517/769740255577505862/AsukieDuvida.png')
     
     message.channel.send(embed)
 }

@@ -106,6 +106,7 @@ message.delete();
  `\n<:SetaZu:765288356913086484> **Cocegas** - Faça cócegas em algum amiguinho.\n` +
  `<:SetaZu:765288356913086484> **Primeiraspalavras** - Primeiras palavras de um bebê.\n` +
  `<:SetaZu:765288356913086484> **Kiss** - Beije seu crush.\n` +
+ `<:SetaZu:765288356913086484> **Stonks** - Use o comando e veja a sua mensagem no meme Stonks.\n` +
  `<:SetaZu:765288356913086484> **Ship** - Faça um ship de algum casal.\n` +
  `<:SetaZu:765288356913086484> **Cafune** - Faça um cafuné em algum amigo(a).\n` +
  `<:SetaZu:765288356913086484> **Gay** - Veja a sua porcetagem de ser gay. **(Leve o comando na zoeira)**\n` +                    
