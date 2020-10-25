@@ -59,7 +59,9 @@ message.channel.send(espere)
     msg.edit(espere1);
 msg.delete({ timeout: 1000 })
 msg.channel.send(embed)
-  }, 1000)})
+  }, 1000)}).then(m => {
+m.delete({timeout: 15000})
+})
 }
 
 exports.help = { 

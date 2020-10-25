@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const request = require("request");
 const db = require('quick.db');
 const dbm = require('mongoose')
-var blockedUsers = [''];
+var blockedUsers = ['729854282521903165', '348202483098583052'];
 
 client.on("message", async message => {
   if (message.author.bot) return;
