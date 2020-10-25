@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const request = require("request");
 const db = require('quick.db');
 const dbm = require('mongoose')
-
+var blockedUsers = ['348202483098583052'];
 
 client.on("message", async message => {
   if (message.author.bot) return;
@@ -15,6 +15,12 @@ client.on("message", async message => {
     message.content.startsWith(`<@!${client.user.id}>`)
   )
     return;
+let blacklistado = new Discord.MessageEmbed()
+.setColor('#0f4bff')
+.setDescription(`Você está proíbido de usar meus comandos.`)
+
+if (blockedUsers.includes(message.author.id) || (message.author.bot)) return message.delete();
+
   let embed = new Discord.MessageEmbed()
   .setDescription(`<:Asukie_atencao:766406396337193020> **|** O comando não existe, utilize \`${config.prefix}ajuda\` para mais informações.`)
   .setColor("#0f4bff")
@@ -94,5 +100,7 @@ client.on('message', message => {
         message.channel.send(`${message.author}`, marcou)
       }
     })
+
+
 
 client.login(config.token);

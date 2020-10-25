@@ -9,7 +9,7 @@ module.exports = {
       return message.channel.send("<a:errado:753245066965024871> **|** Por favor descreva o bug. [**Aviso:** \`Não abuse do comando ou será colocado na **BlackList**\`]")
     }
     
-    const channel = client.channels.cache.get('764196105268625428');
+    const channel = client.channels.cache.get('764930175354929182');
     
     
     if(!channel) {
@@ -19,7 +19,7 @@ module.exports = {
     
     let embed = new MessageEmbed()
     .setTitle('Asukie | Bug Report')
-    .setThumbnail('https://cdn.discordapp.com/attachments/759155689733226517/766791885184172082/AsukieBugReport2.png')
+    .setThumbnail('https://cdn.discordapp.com/emojis/766792320292487191.png?v=1')
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
     .setColor("#0f4bff")
     .addField("Usuário", `${message.author}`)
@@ -34,7 +34,7 @@ module.exports = {
     
 
     
-    message.channel.send("<a:aaaaaa:766437760381878282> **|** Seu report foi enviado com sucesso!")
+    message.channel.send("<a:aaaaaa:766437760381878282> **|** Seu bug foi enviado com sucesso!")
     
   }
 }

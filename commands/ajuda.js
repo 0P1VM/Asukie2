@@ -143,7 +143,8 @@ message.delete();
      .setDescription(`<a:gatinho_:763776921326190655>**·Prefixo:** \`${c.prefix}\`\n` +
      `<:SetaZu:765288356913086484> **Mcskin** - É um comando pra você conseguir a skin de alguma conta do Minecraft.\n` +
      `<:SetaZu:765288356913086484> **Mchead** - É um comando pra você conseguir a Cabeça de alguma conta do Minecraft.\n` +    
-     `<:SetaZu:765288356913086484> **Bug** - Reporte alguma falha do bot usando esse comando.\n`+                
+     `<:SetaZu:765288356913086484> **Bug** - Reporte alguma falha do bot usando esse comando.\n`+ 
+     `<:SetaZu:765288356913086484> **Invite** - Veja os links do meu convite e do meu servidor suporte.\n` +                            
      `<:SetaZu:765288356913086484> **Cpu** - Veja minhas configurações de cpu.\n`+
      `<:SetaZu:765288356913086484> **Avatar** - Veja seu avatar em um tamanho maior ou de outro membro.\n` +
      `<:SetaZu:765288356913086484> **Covid** - Veja os casos do Covid-19 no mundo inteiro.\n` +
@@ -160,7 +161,7 @@ message.delete();
      `<:SetaZu:765288356913086484> **Roleinfo** - Veja as informações de algum cargo.\n` +               
      `<:SetaZu:765288356913086484> **Servericon** - Veja a foto do servidor em tamanho maior.\n` +                     
      `<:SetaZu:765288356913086484> **Serverinfo** - Veja as informações do servidor.\n` +
-     `<:SetaZu:765288356913086484> **Userinfo** - Veja informações de algum usuário.\n` +
+     `<:SetaZu:765288356913086484> **Userinfo** - Veja informações de algum usuário.\n` +                
      `<:SetaZu:765288356913086484> **Emoji** - Veja algum emoji em um tamanho maior, pode ser de outros servidores também.`)
   .setFooter(`Página 5 de 5 | Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
   .setThumbnail(client.user.displayAvatarURL({ dynamic:true }))

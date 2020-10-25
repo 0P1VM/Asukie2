@@ -33,10 +33,11 @@ var manutenção = await db.get(`manutenção`)
     .addField("Aguarde","Aguarde alguns segundos. <:Asukie_Blindao:764726364775251968>")
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
 
-    const m = await message.channel.send(`Ping?`)
+    const m = await message.channel.send(`Latencia?`)
     .then(botmsg => botmsg.delete({ timeout: 1}))
     let embed_ping = new Discord.MessageEmbed() // Aqui vai ser a terceira embed que o bot irá mostrar
     .setColor('#0f4bff')
+    .setThumbnail("https://cdn.discordapp.com/attachments/759155689733226517/769728182856712212/Icon_Low-latency.png")
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
     .addField(` Latência`,[
         `\`${m.createdTimestamp - message.createdTimestamp}\` ms`])

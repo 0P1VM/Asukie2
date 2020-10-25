@@ -35,13 +35,10 @@ var manutenção = await db.get(`manutenção`)
     message.guild.emojis.create(args[1], args[0]).then(emoji => {
       message.channel.send(`${emoji} **|** ${message.author} Emoji adicionado com sucesso!`)
     })
-  } catch (err) {
-    let a5 = new Discord.MessageEmbed()
-    .setDescription(`<:incorreto:729451886683619438> **|** Ocorreu um erro! \`\`\`js\n${err}\`\`\``)
-
-    message.channel.send(a5)
-  }
-
+  } catch(error) {
+            console.log(error);
+message.channel.send('Maximum number of emojis reached (50)')
+        };
 }
 
 exports.help = {
