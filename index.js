@@ -15,9 +15,6 @@ client.on("message", async message => {
     message.content.startsWith(`<@!${client.user.id}>`)
   )
     return;
-let blacklistado = new Discord.MessageEmbed()
-.setColor('#0f4bff')
-.setDescription(`Você está proíbido de usar meus comandos.`)
 
 if (blockedUsers.includes(message.author.id) || (message.author.bot)) return message.delete();
   let embed = new Discord.MessageEmbed()
@@ -28,14 +25,24 @@ if (blockedUsers.includes(message.author.id) || (message.author.bot)) return mes
     .slice(config.prefix.length)
     .split(/ +/g);
   const command = args.shift().toLowerCase();
- const canal = client.channels.cache.get('769739393140260874').send(`${message.author} Utilizou o comando ${command}`)
+let cmdlog = new Discord.MessageEmbed()
+.setColor('#0f4bff')
+.setAuthor(`${client.user.username} | Log`, client.user.displayAvatarURL({dynamic: true}))
+.setDescription(`**<:Info_1:768615897891078164> Autor:** \`${message.author.tag}\` **/** \`${message.author.id}\`\n`+ 
+`\n<:ModulE:762729478757023834>  **Comando executado:** \`${config.prefix}${command}\``)
+.setFooter(`${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
+.setTimestamp()
+
+ const canal = client.channels.cache.get('769739393140260874').send(cmdlog)
   try {
     const commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, message, args);
   } catch (err) {
     console.error(err);
     message.delete();
-  message.channel.send(embed)
+  message.channel.send(embed).then(m => {
+      m.delete({ timeout: 9000 });
+    });
     
 
     

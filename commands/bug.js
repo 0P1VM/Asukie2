@@ -6,7 +6,7 @@ module.exports = {
   run: async (client, message, args) => {
     
     if(!args.length) {
-      return message.channel.send("<a:errado:753245066965024871> **|** Por favor descreva o bug. [**Aviso:** \`Não abuse do comando ou será colocado na **BlackList**\`]")
+      return message.channel.send("<a:errado:753245066965024871> **|** Por favor descreva o bug. [**Aviso:** \`Não abuse do comando ou será colocado na BlackList\`]")
     }
     
     const channel = client.channels.cache.get('764930175354929182');
@@ -18,7 +18,7 @@ module.exports = {
                                                     
     
     let embed = new MessageEmbed()
-    .setTitle('Asukie | Bug Report')
+    .setTitle('Asukie | Bug')
     .setThumbnail('https://cdn.discordapp.com/emojis/766792320292487191.png?v=1')
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
     .setColor("#0f4bff")

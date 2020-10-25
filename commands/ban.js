@@ -22,10 +22,21 @@ var manutenção = await db.get(`manutenção`)
      return message.channel.send(mnt)
       
     } 
-
+ let aliases = new Discord.MessageEmbed()
+.setAuthor(`Comando inválido | ${client.user.username}`, 'https://images-ext-1.discordapp.net/external/68qa_JhFyKLs4CPQn5ZI3ECElC2W-jjeJGh5DxtOrgw/%3Fv%3D1/https/cdn.discordapp.com/emojis/766406396337193020.png?width=104&height=104')
+.setDescription(`<:SetaZu:765288356913086484> Comando: **${c.prefix}ban**\n` +
+`<:SetaZu:765288356913086484> Exemplo: **${c.prefix}ban **@**usuario Quebrou as regras!**\n` +
+`<:BlueSeta_:765293754637877268> Aliases: **${c.prefix}punir**\n` +
+`ㅤ\n` +
+`<:SetaZu:765288356913086484> **Descrição:**\n` +
+`Utilize para banir um usuário mencionado\n` +
+`**(Necessita de confirmação).**`)
+.setThumbnail(client.user.displayAvatarURL({dynamic: true}))
+.setFooter(`${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
+.setColor('#0f4bff')
   let perm = new Discord.MessageEmbed()
     .setDescription(
-      `<a:errado:753245066965024871> **|** Você não tem permissão para banir este usuário.`
+      `<a:Asukie_Errado:767937012287537163> **| Você não tem permissão para banir este usuário.**`
     )
     .setColor(`#0f4bff`)
     .setFooter(
@@ -35,7 +46,7 @@ var manutenção = await db.get(`manutenção`)
 
   let superior = new Discord.MessageEmbed()
     .setDescription(
-      `<a:errado:753245066965024871> **|** Você não tem permissão para banir este usuário.`
+      `<a:Asukie_Errado:767937012287537163> **| O usuário mencionado está com cargos superiores a você.**`
     )
     .setColor(`#0f4bff`)
     .setFooter(
@@ -47,62 +58,50 @@ if (!message.member.hasPermission("BAN_MEMBERS"))
     return message.channel.send(
       `<a:Bnao:746212123901820929> **|** Desculpe, ${message.author}. É necessário ter a permissão de **BAN_MEMBERS** para executar este comando!`
     );
-  if (!message.guild.me.hasPermission("BAN_MEMBERS"))
+ if (!message.guild.me.hasPermission("BAN_MEMBERS"))
     return message.channel.send(
       `<a:Bnao:746212123901820929> **|** Oops! eu não tenho a permissão de **BAN_MEMBERS**, portanto não posso executar esta ação!`
     );
-  if (!membro)
-    return message.channel
-      .send(
-        `<a:Asukie_Errado:767937012287537163> **|** ${message.author} utilize o comando.\n` +
-          `> **Exemplo:** ${c.prefix}ban <@usuario> motivo`
-      )
-      .then(m => {
-        m.delete({ timeout: 9000 });
-      });
   var motivo = args.slice(1).join(" ");
-  if (!motivo) motivo = "<a:errado:753245066965024871> **|** Motivo não inserido";
+  if (!motivo) motivo = "Nenhum motivo inserido.";
 
 let unkn = new Discord.MessageEmbed()
 .setDescription(`<a:Asukie_Errado:767937012287537163> **| O usuário mencionado não foi encontrado.**`)
 .setColor('#0f4bff')
 .setFooter('Requisitado por:' + message.author.username, message.author.displayAvatarURL({dynamic: true}))
-  var membro;
-    if (message.mentions.members.size > 0) {
+     var membro;     
+      if (message.mentions.members.size > 0) {
         if (/<@!?[\d]{18}>/.test(args[0]) && args[0].length <= 22) {
             membro = message.mentions.members.first();
         }
     } else if (/[\d]{18}/.test(args[0]) && args[0].length === 18) {
         membro = message.guild.members.cache.get(args[0]) || args[0];
     } else {
-        message.channel.send(unkn).then(m => {
-m.delete({timeout: 15000})
-})
+       message.channel.send(aliases)
+      .then(m => {
+        m.delete({ timeout: 21000 });
+      });
         return 0;
     }
-  
+ 
+    if (membro === message.member)
+    return message.channel.send(superior).then(m => {
+      m.delete({ timeout: 9000 });
+    });
 
-    if (typeof membro !== "string") {
         if (membro.id === message.guild.ownerID) {
-            message.channel.send('<a:Asukie_Errado:767937012287537163> **|** Você não pode banir o usuário com a posse do servidor, bobinho.')
+            message.channel.send('<a:Asukie_Errado:767937012287537163> **|** Você não pode banir o usuário com a posse do servidor, bobinho.').then(m => {
+      m.delete({ timeout: 9000 });
+    });
             return 0;
         }
         if (membro.id === client.user.id) {
-            message.channel.send('Você não pode utilizar este comando em mim.')
+            message.channel.send('Você não pode utilizar este comando em mim.').then(m => {
+      m.delete({ timeout: 9000 });
+    });
             return 0;
         }
-        let executorRole = message.member.highestRole;
-        let targetRole = membro.highestRole;
-        if (executorRole.comparePositionTo(targetRole) <= 0 && message.author.id !== message.guild.ownerID) {
-            message.channel.send(perm)
-            return 0;
-        }
-        let clientRole = message.guild.me.highestRole;
-        if (clientRole.comparePositionTo(targetRole) <= 0) {
-            message.reply("Não tenho permissão para banir este usúario");
-            return 0;
-        }
-    }
+
   let cma = new Discord.MessageEmbed()
     .setAuthor(
       `Confirme a ação a seguir:`,
@@ -113,7 +112,7 @@ m.delete({timeout: 15000})
       `ㅤ${membro} (\`${membro.id}\`)`
     )
     .addField(
-      `<:notepad:735956294854377603> **| Motivo inserido:**`,
+      `<:Info_4:768643566804402276> **| Motivo inserido:**`,
       `ㅤ${motivo}`
     )
     .setColor(`#0f4bff`)
@@ -123,11 +122,11 @@ m.delete({timeout: 15000})
     );
 
   let confirm_msg = await message.channel.send(cma);
-  confirm_msg.react("747042062263910441");
-  confirm_msg.react("746212123901820929");
+  confirm_msg.react("766437760381878282");
+  confirm_msg.react("767937012287537163");
 
   let filtro = (reaction, usuario) =>
-    reaction.emoji.id === "747042062263910441" &&
+    reaction.emoji.id === "766437760381878282" &&
     usuario.id === message.author.id;
   let coletor = confirm_msg.createReactionCollector(filtro, { max: 1 });
 
@@ -201,24 +200,23 @@ m.delete({timeout: 15000})
       `ㅤ<:SetaZu:765288356913086484> **Tag:** \`${message.author.tag}\`\n` +
         `ㅤ<:SetaZu:765288356913086484> **ID:** \`${message.author.id}\``
     )
-    .addField(`<:notepad:735956294854377603> **| Motivo:**`, `ㅤ${motivo}`);
+    .addField(`<:Info_4:768643566804402276> **| Motivo:**`, `ㅤ${motivo}`);
   coletor.on("collect", cp => {
     cp.remove(message.author.id);
-    membro.ban();
-    membro.send(membroban);
+    membro.ban({reason : motivo})
+    membro.send(membroban)
     message.channel.send(banido).then(m => {
-      m.delete({ timeout: 9000 });
-    });
+      m.delete({ timeout: 15000 })
+    })
     confirm_msg.delete();
-  });
+  })
 
   let filtro2 = (reaction, usuario) =>
-    reaction.emoji.id === "746212123901820929" &&
+    reaction.emoji.id === "767937012287537163" &&
     usuario.id === message.author.id;
   let coletor2 = confirm_msg.createReactionCollector(filtro2, { max: 1 });
 
   coletor2.on("collect", cp => {
     confirm_msg.delete();
-  })
-}
+  }) 
 }
