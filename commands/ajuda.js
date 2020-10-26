@@ -101,7 +101,7 @@ message.delete();
 
       let interacao = new Discord.MessageEmbed()
      	 .setColor("#0f4bff") 
-     .setAuthor('Interação', client.user.displayAvatarURL({ dynamic:true }))
+     .setAuthor(`${client.user.username} - Interação`, client.user.displayAvatarURL({ dynamic:true }))
      .setDescription(`<a:gatinho_:763776921326190655>**·Prefixo:** \`${c.prefix}\`\n` +
  `\n<:SetaZu:765288356913086484> **Cocegas** - Faça cócegas em algum amiguinho.\n` +
  `<:SetaZu:765288356913086484> **Primeiraspalavras** - Primeiras palavras de um bebê.\n` +
@@ -140,7 +140,7 @@ message.delete();
 
       let utilidade = new Discord.MessageEmbed()
      	 .setColor("#0f4bff") 
-     .setAuthor('Administração', client.user.displayAvatarURL({ dynamic:true }))
+     .setAuthor(`${client.user.username} - Utilidades`, client.user.displayAvatarURL({ dynamic:true }))
      .setDescription(`<a:gatinho_:763776921326190655>**·Prefixo:** \`${c.prefix}\`\n` +
      `<:SetaZu:765288356913086484> **Mcskin** - É um comando pra você conseguir a skin de alguma conta do Minecraft.\n` +
      `<:SetaZu:765288356913086484> **Mchead** - É um comando pra você conseguir a Cabeça de alguma conta do Minecraft.\n` +    
