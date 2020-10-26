@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const c = require("../config.json");
 const db = require("quick.db");
-const b = require('../renegados/renegados.js')
 
 exports.run = async (client, message, args) => {
   message.delete();
@@ -218,10 +217,15 @@ let unkn = new Discord.MessageEmbed()
     .addField(`<:Info_4:768643566804402276> **| Motivo:**`, `ㅤ${motivo}`);
   coletor.on("collect", cp => {
     cp.remove(message.author.id);
+    if(!membro.bannable) return confirm_msg.delete().then(m => {
+m.channel.send(unkn)
+})
+    if(membro.bannable) {
     membro.ban({reason : `Banido por: ${message.author.tag} | Motivo: ${motivo}`})
+    }
     membro.send(membroban)
     message.channel.send(banido).then(m => {
-      m.delete({ timeout: 25000 })
+      m.delete({ timeout: 20000 })
     })
     confirm_msg.delete();
   })

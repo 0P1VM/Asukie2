@@ -4,7 +4,6 @@ const os = require('os')
 const moment = require("moment")
 const c = require('../config.json');
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 moment.locale('pt-BR')
 
@@ -71,7 +70,7 @@ var manutenção = await db.get(`manutenção`)
     let embed = new Discord.MessageEmbed()
 
    .setColor('#0f4bff')
-   .setAuthor(`Painel de Informações`, client.user.displayAvatarURL())
+   .setAuthor(`Asukie™ | Botinfo`, client.user.displayAvatarURL())
    .setDescription(`Olá ${message.author} eu sou a ${client.user.username}, minha idade é um mistério para todos, mas já vi vários usuários criando hipóteses! Fui desenvolvido para ajudar em seu servidor, tenho sistemas de economia, moderação, entretenimento e segurança. Para saber mais sobre mim, olhe abaixo:`)
    .addField(`<:it:761067994486800415> **| Informações Gerais:**`, `> Programadores: ${dev1} & ${dev}\n` +
    `> Data de criação: \`${moment(client.user.createdAt).format('LL')}\`\n` +
@@ -84,8 +83,8 @@ var manutenção = await db.get(`manutenção`)
    `<:BlueSeta_:765293754637877268> Documentação: **${livraria}**\n` +
    `\n<:BlueSeta_:765293754637877268> **Me adicione: ${adicioneeu}**\n` +
    `<:BlueSeta_:765293754637877268> **Servidor Suporte: ${suporte}**`) 
-   .setThumbnail(`https://media.discordapp.net/attachments/760597034138075158/761074283505385492/puzzel-bot-icon.png?width=480&height=480`) 
-   .setImage(`https://i.imgur.com/yCNblD0.png`)
+   .setThumbnail('https://cdn.discordapp.com/attachments/759155689733226517/770328271702589510/AsukieBotinfo.png') 
+   .setImage('https://i.imgur.com/yCNblD0.png')
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
   
    message.channel.send(embed).then(m => {

@@ -1,8 +1,7 @@
 const Discord = require("discord.js");
 const c = require('../config.json');
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
-
+const cor = require('../utils/cor.json')
 exports.run = async (client, message, args) => {
 message.delete().catch(()=>{});
     var user = message.mentions.users.first();
@@ -18,10 +17,11 @@ message.delete().catch(()=>{});
    
     let embed = new Discord.MessageEmbed()
     .setAuthor(user.tag, user.displayAvatarURL({dynamic:true}))
-    .setThumbnail( message.guild.iconURL({dynamic:true}))
+    .setThumbnail(message.guild.iconURL({dynamic:true}))
     .setDescription(`**<:add3Asukie:770087183755247646> Convidados: ${invitesUses}\n` +
    `<:add2Asukie:770087154260770826> Total no servidor: ${message.guild.members.cache.size}**`)
    .addField(`Lista de Convites`, `<:addAsukie:770087057108107276> ${targetInvites}`)
+.setColor(cor.padrao)
    .setFooter(message.guild.name,  message.guild.iconURL({dynamic:true}))
   .setTimestamp()
     message.channel.send(embed).then(m => {

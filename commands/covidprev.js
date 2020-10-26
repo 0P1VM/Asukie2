@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 module.exports = {
     name: 'covidprev',
@@ -33,7 +32,7 @@ var manutenção = await db.get(`manutenção`)
     .addField('Como lavar as mãos corretamente?', ' Use sabão suficiente para que a espuma cubra toda a superfície das mãos. A lavagem completa deve durar cerca de 50 segundos e ter os seguintes passos:\n Esfregue bem a palma das mãos; capriche na limpeza do espaço entre os dedos e também do dorso e do punho. Depois, seque com toalha descartável (em ambientes coletivos). Se a torneira não for automática, use a tolha de papel para fechá-la, ou lave a torneira antes de ensaboar as mãos.')
     .addField('Por que devemos ficar em casa?', ' Como nosso organismo ainda não tem anticorpos para combater o novo coronavírus, ele é transmitido facilmente de um indivíduo para outro. Se as pessoas continuarem levando uma vida normal (indo trabalhar, frequentando lugares aglomerados etc.), o número de pacientes com covid-19 tende a se elevar rapidamente e sobrecarregar o sistema de saúde. Aí, os hospitais não conseguem atender adequadamente casos graves e o número de mortes aumenta.\n Segundo pesquisa epidemiológica do Instituto Butantan, no estado de São Paulo, uma pessoa infectada antes do isolamento tinha potencial para transmitir o vírus para seis pessoas, em média. Com a quarentena, essa taxa caiu para duas pessoas. Por isso é muito importante que todos continuem em casa para evitar o crescimento acentuado da covid-19.')
     .setColor('#0f4bff')
-    .setThumbnail('https://static.natura.com/cdn/farfuture/aAQYmDJ_IxuzkHQoRa94nUcK9GrfRdo9zNzQSw5JkmM/1584738912/sites/default/files/inline-images/maos-07.png')
+    .setThumbnail('https://cdn.discordapp.com/attachments/759155689733226517/770326529573257246/Asukiecovid19.png')
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
 
     message.channel.send(covidprev)

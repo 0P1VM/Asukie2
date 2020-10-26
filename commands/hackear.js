@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const c = require('../config.json')
 const time = ""
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 exports.run = async (client, message, args) => { 
 message.delete();

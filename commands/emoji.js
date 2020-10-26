@@ -2,7 +2,6 @@ const Discord = require('discord.js')
 const { parse } = require('twemoji-parser')
 const c = require('../config.json')
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 module.exports.run = async (client, message, args) => {
   

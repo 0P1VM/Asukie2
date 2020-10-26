@@ -1,7 +1,6 @@
 const Discord = require('discord.js')
 const { suicide } = require('star-labs')
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 module.exports = {
   config: {

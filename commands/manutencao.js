@@ -1,7 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 const db = require ('quick.db')
 const c = require('../config.json')
-const b = require('../renegados/renegados.js')
 
 exports.run = async (client, message, args) => {
 message.delete();

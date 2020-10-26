@@ -3,7 +3,6 @@ const { Random } = require("something-random-on-discord");
 const random = new Random();
 const db = require('quick.db')
 const c = require('../config.json')
-const b = require('../renegados/renegados.js')
 
 module.exports = {
   name: "soco",

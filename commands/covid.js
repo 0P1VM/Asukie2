@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const Discord = require('discord.js');
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
+
 const c = require('../config.json')
 
 module.exports = {
@@ -42,7 +42,7 @@ var manutenção = await db.get(`manutenção`)
                 .addField('Recuperados', recovered)
                 .addField('Mortes', deaths)
                 .setColor('#0f4bff')
-                .setThumbnail('https://newsinteractive.post-gazette.com/media/2020/03/coronavirus/covid19.png')
+                .setThumbnail('https://cdn.discordapp.com/attachments/759155689733226517/770326529573257246/Asukiecovid19.png')
                 .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}));
 
                 message.channel.send(embed)
@@ -61,7 +61,7 @@ var manutenção = await db.get(`manutenção`)
                 .addField('Recuperados', recovered)
                 .addField('Mortes', deaths)
                 .setColor('#0f4bff')
-                .setThumbnail('https://newsinteractive.post-gazette.com/media/2020/03/coronavirus/covid19.png')
+                .setThumbnail('https://cdn.discordapp.com/attachments/759155689733226517/770326529573257246/Asukiecovid19.png')
                 .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}));
 
                 message.channel.send(embed)

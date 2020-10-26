@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const moment = require('moment');
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 module.exports = {
 	name: 'roleinfo',
@@ -45,7 +44,8 @@ module.exports = {
 			.setColor(role.hexColor)
       .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
       .setTitle("Asukie™ | RoleInfo")
-			.addField('Role Nome', `\`${role.name}\``, true)
+      .setThumbnail("https://cdn.discordapp.com/attachments/759155689733226517/770332756613398568/AsukieRoleinfo.png")
+			.addField('Nome', `\`${role.name}\``, true)
 		  .addField('Role ID', `\`${role.id}\``, true)
 			.addField('Hex Cor', `\`${role.hexColor.toUpperCase()}\``)
 			.addField('Membros', `\`${role.members.size}\``, true)

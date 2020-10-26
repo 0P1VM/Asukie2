@@ -26,6 +26,7 @@ if (blockedUsers.includes(message.author.id) || (message.author.bot)) return mes
     .slice(config.prefix.length)
     .split(/ +/g);
   const command = args.shift().toLowerCase();
+
 const logg = new Discord.WebhookClient('770083731520094208', 'jsbJe_k6H10iPBaXgr1Gb71S2fFfedv-RMw1TzGHLjUWawMSVEDn7k0nK-yf1pavPwhl')
 let cmdlog = new Discord.MessageEmbed()
 .setColor('#0f4bff')
@@ -38,6 +39,7 @@ let cmdlog = new Discord.MessageEmbed()
 .setTimestamp()
 
 logg.send(cmdlog)
+
   try {
     const commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, message, args);

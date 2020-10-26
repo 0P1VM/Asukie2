@@ -1,6 +1,5 @@
 const Discord = require("discord.js")
 const c = require('../config.json')
-const b = require('../renegados/renegados.js')
 
 module.exports.run = async (client, message, args) => {
 message.delete();
@@ -85,7 +84,6 @@ message.delete();
  `<:SetaZu:765288356913086484> **Welcome** - Configure o sistema de entrada/saída.\n` +
  `<:SetaZu:765288356913086484> **Logs** - Selecione um chat para aparecer mensagens deletadas/editada etc.\n` +
  `<:SetaZu:765288356913086484> **Imunidade** - Selecione chat/cargo, que ser alguma defesa estiver ativada, o bot não irá excluir.\n` +
- `<:SetaZu:765288356913086484> **Sugestão** - Configure algum chat para sugestões dos membros.\n` +
  `<:SetaZu:765288356913086484> **Contador** - Coloque no mínimo 10 chats, onde o bot irá contar os membros do servidor todo.`)
   .setFooter(`Página 3 de 5 | Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
   .setThumbnail('https://media.discordapp.net/attachments/759155689733226517/770125872229253150/660973379037298696.png')
@@ -153,7 +151,8 @@ message.delete();
      `<:SetaZu:765288356913086484> **Pais** - Obtenha as informações de algum País.\n` +                            
      `<:SetaZu:765288356913086484> **Latencia** - Veja a latência da Asukie.\n` +            
      `<:SetaZu:765288356913086484> **Clima** - Veja o clima de alguma cidade.\n` + 
-     `<:SetaZu:765288356913086484> **Roleinfo** - Veja as informações de algum cargo.\n` +               
+     `<:SetaZu:765288356913086484> **Roleinfo** - Veja as informações de algum cargo.\n` +        
+     `<:SetaZu:765288356913086484> **Listrole** - Veja todos os cargos de algum servidor.\n` +                               
      `<:SetaZu:765288356913086484> **Servericon** - Veja a foto do servidor em tamanho maior.\n` +                     
      `<:SetaZu:765288356913086484> **Serverinfo** - Veja as informações do servidor.\n` +
      `<:SetaZu:765288356913086484> **Userinfo** - Veja informações de algum usuário.\n` +                

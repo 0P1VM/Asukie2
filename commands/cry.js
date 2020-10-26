@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const { Random } = require("something-random-on-discord");
 const db = require('quick.db')
 const random = new Random()
-const b = require('../renegados/renegados.js')
 
 module.exports = {
   name: "cry",

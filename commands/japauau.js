@@ -2,7 +2,6 @@ const Jimp = require('jimp')
 const c = require('../config.json')
 const Discord = require('discord.js')
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 module.exports = {
 	name: 'japauau',

@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const imdb = require("imdb-api");
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 module.exports = {
   name: "serfil",

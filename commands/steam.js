@@ -2,7 +2,6 @@
 var steam = require('steam-provider') //npm i steam-provider
 var provider = new steam.SteamProvider();
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 exports.run = async(client, message, args) => {
 message.delete();

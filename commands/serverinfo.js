@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const moment = require("moment")
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 moment.locale('pt-BR')
 

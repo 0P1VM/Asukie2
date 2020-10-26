@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 
 module.exports = {
     name: 'covidsin',
@@ -34,7 +33,7 @@ var manutenção = await db.get(`manutenção`)
     .addField("Sintomas menos comuns", " Dores e desconfortos\n  Dor de garganta\n  Diarreia\n  Conjutivite\n  Dor de cabeça\n  Perda de paladar\n  Erupção cutânea na pele ou descoloração dos dedos das mãos ou dos pés")
     .addField("Sintomas graves", " Dificuldade de respirar ou falta de ar\n  Dor ou pressão no peito\n  Perda de fala ou movimento")
     .setColor('#0f4bff')
-    .setThumbnail('https://images.vexels.com/media/users/3/193239/isolated/preview/e83db85552ee35f6276411c9f19d982d-covid-19-boy-character-icon-by-vexels.png')
+    .setThumbnail('https://cdn.discordapp.com/attachments/759155689733226517/770326529573257246/Asukiecovid19.png')
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
 
     message.channel.send(covidsin)

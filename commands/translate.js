@@ -1,7 +1,6 @@
  const translate = require('@vitalets/google-translate-api');
 const Discord = require('discord.js');
 const db = require('quick.db')
-const b = require('../renegados/renegados.js')
 let langs = {
     'auto': 'Automatic',
     'af': 'Afrikaans',
@@ -138,7 +137,8 @@ var manutenção = await db.get(`manutenção`)
      let embed = new Discord.MessageEmbed()
       .setTitle(`Asukie Tradutor`)
       .setColor('#0f4bff')
-      .setThumbnail('https://static.apkthing.com/uploads/posts/2015-01/1421472148_google-translate12.png')
+     .setTitle("Asukie™ | Translate")
+      .setThumbnail('https://cdn.discordapp.com/attachments/759155689733226517/770320167107952671/TradutorAsukie.png')
       .setDescription(`Texto traduzido de: ` + "`" + `${langs[args[0]]}` + "`" + " para " + "`" + `${langs[args[1]]}` + "`")
       .addField('Texto enviado:', msg)
       .addField(`Texto traduzido:`, res.text)   
