@@ -14,11 +14,11 @@ message.delete();
   `<:BlueSeta_:765293754637877268> [Meu servidor de suporte](https://discord.gg/n5eNazJ)**`)
 	  .addField(`Defesa e Segurança:`, `**<a:um_:765292155165868092> | Administração\n` +
     `<a:dois_:765292512674971739> | Moderação \n` +
-    `<a:tres_:765292551313162310> | Configuração \n` +
-		`<a:quatro_:765292583273889832> | Interação\n` +
-    `<a:cinco_:765292618275749889> | Utilidades**`)
+    `<a:tres_:765292551313162310> | Configuração**`, true)
+ .addField(`Opções:`, `**<a:quatro_:765292583273889832> | Interação\n` +
+    `<a:cinco_:765292618275749889> | Utilidades**`, true)
     .setFooter(`Comando requisitado por: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
-	.setThumbnail(client.user.displayAvatarURL({ dynamic:true }))
+	.setThumbnail('https://media.discordapp.net/attachments/759155689733226517/770125872229253150/660973379037298696.png')
 .setImage('https://i.imgur.com/rYKyIXl.png')
 
      message.channel.send(painel).then(msg => {
@@ -37,7 +37,7 @@ message.delete();
 	 `<:SetaZu:765288356913086484> **Cargoall** - Adicione algum cargo, para todos dentro do servidor.\n` +
 	 `<:SetaZu:765288356913086484> **Votacao** - Faz uma votação no seu servidor(obs: use o comando no chat onde você irá fazer a votação.)`)
 	 .setFooter(`Página 1 de 5 | Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
-	 .setThumbnail(client.user.displayAvatarURL({ dynamic:true }))
+	 .setThumbnail('https://media.discordapp.net/attachments/759155689733226517/770125872229253150/660973379037298696.png')
    .setImage('https://i.imgur.com/rYKyIXl.png')
       coletor.on("collect", cp => {
 
@@ -64,7 +64,7 @@ message.delete();
 `<:SetaZu:765288356913086484> **Kick** - Expulse algum membro do seu servidor.\n` +
 `<:SetaZu:765288356913086484> **Warn** - De um aviso pra algum usuário.`)
  .setFooter(`Página 2 de 5 | Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
- .setThumbnail(client.user.displayAvatarURL({ dynamic:true }))
+ .setThumbnail('https://media.discordapp.net/attachments/759155689733226517/770125872229253150/660973379037298696.png')
   .setImage('https://i.imgur.com/rYKyIXl.png')
      coletor2.on("collect", cp => {
 
@@ -88,7 +88,7 @@ message.delete();
  `<:SetaZu:765288356913086484> **Sugestão** - Configure algum chat para sugestões dos membros.\n` +
  `<:SetaZu:765288356913086484> **Contador** - Coloque no mínimo 10 chats, onde o bot irá contar os membros do servidor todo.`)
   .setFooter(`Página 3 de 5 | Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
-  .setThumbnail(client.user.displayAvatarURL({ dynamic:true }))
+  .setThumbnail('https://media.discordapp.net/attachments/759155689733226517/770125872229253150/660973379037298696.png')
   .setImage('https://i.imgur.com/rYKyIXl.png')
       coletor3.on("collect", cp => {
 
@@ -115,7 +115,6 @@ message.delete();
  `<:SetaZu:765288356913086484> **Japauau** - Use o comando e veja um programa japonês reagindo ao o que você escreveu.\n` +
  `<:SetaZu:765288356913086484> **Supreme** - Use o comando e veja a logo da Supreme com oque você escreveu.\n` +                    
  `<:SetaZu:765288356913086484> **Hipocrisia** - Escreva algo pra aparecer no meme do "Enfim a hipocrisia".\n` +                    
- `<:SetaZu:765288356913086484> **Conquista** - Use o comando, e conquiste oque mais deseja.\n` +
   `<:SetaZu:765288356913086484> **Suicide** - "Se mate usando o comando. **(Leve o comando na zoeira, são apenas gif's de Animes)**\n` +                    
  `<:SetaZu:765288356913086484> **Matar** - Mate alguém. **(Leve o comando na zoeira, são apenas gif's de Animes)**\n` +
  `<:SetaZu:765288356913086484> **Hackear** - "hackei" alguém. **(Leve o comando na zoeira)**\n` +
@@ -127,7 +126,7 @@ message.delete();
  `<:SetaZu:765288356913086484> **Roletarussa** - Jogue roletarussa comigo.\n` +                   
  `<:SetaZu:765288356913086484> **Baka** - Chame alguém de baka.`)
   .setFooter(`Página 4 de 5 | Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
-  .setThumbnail(client.user.displayAvatarURL({ dynamic:true }))
+  .setThumbnail('https://media.discordapp.net/attachments/759155689733226517/770125872229253150/660973379037298696.png')
   .setImage('https://i.imgur.com/rYKyIXl.png')
       coletor4.on("collect", cp => {
 
@@ -141,17 +140,12 @@ message.delete();
       let utilidade = new Discord.MessageEmbed()
      	 .setColor("#0f4bff") 
      .setAuthor(`${client.user.username} - Utilidades`, client.user.displayAvatarURL({ dynamic:true }))
-     .setDescription(`<a:gatinho_:763776921326190655>**·Prefixo:** \`${c.prefix}\`\n` +
-     `<:SetaZu:765288356913086484> **Mcskin** - É um comando pra você conseguir a skin de alguma conta do Minecraft.\n` +
-     `<:SetaZu:765288356913086484> **Mchead** - É um comando pra você conseguir a Cabeça de alguma conta do Minecraft.\n` +    
-     `<:SetaZu:765288356913086484> **Bug** - Reporte alguma falha do bot usando esse comando.\n`+ 
+     .setDescription(`<a:gatinho_:763776921326190655>**·Prefixo:** \`${c.prefix}\`\n\n` +
      `<:SetaZu:765288356913086484> **Invite** - Veja os links do meu convite e do meu servidor suporte.\n` +                            
      `<:SetaZu:765288356913086484> **Cpu** - Veja minhas configurações de cpu.\n`+
      `<:SetaZu:765288356913086484> **Avatar** - Veja seu avatar em um tamanho maior ou de outro membro.\n` +
      `<:SetaZu:765288356913086484> **Covid** - Veja os casos do Covid-19 no mundo inteiro.\n` +
-     `<:SetaZu:765288356913086484> **Covidsin** - Veja os sintomas do Covid-19.\n` +              
-     `<:SetaZu:765288356913086484> **Covidprev** - Veja algumas prevenções contra o Covid-19.\n` +                              
-     `<:SetaZu:765288356913086484> **Cronometro** - Irei cronometrar um tempo pra você.\n` +                                    
+     `<:SetaZu:765288356913086484> **Covidsin** - Veja os sintomas do Covid-19.\n` +                                                                              
      `<:SetaZu:765288356913086484> **Botinfo** - Veja informações do bot toda.\n` +
      `<:SetaZu:765288356913086484> **Traduzir** - Traduza algum texto com facilidade e rapidez.\n` +                
      `<:SetaZu:765288356913086484> **Steam** - Veja as informações do seu jogo preferido da plataforma Steam.\n` +
@@ -165,7 +159,7 @@ message.delete();
      `<:SetaZu:765288356913086484> **Userinfo** - Veja informações de algum usuário.\n` +                
      `<:SetaZu:765288356913086484> **Emoji** - Veja algum emoji em um tamanho maior, pode ser de outros servidores também.`)
   .setFooter(`Página 5 de 5 | Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
-  .setThumbnail(client.user.displayAvatarURL({ dynamic:true }))
+  .setThumbnail('https://media.discordapp.net/attachments/759155689733226517/770125872229253150/660973379037298696.png')
   .setImage('https://i.imgur.com/rYKyIXl.png')
       coletor5.on("collect", cp => {
 
