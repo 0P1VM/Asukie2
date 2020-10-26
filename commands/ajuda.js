@@ -7,17 +7,17 @@ message.delete();
 
     let painel = new Discord.MessageEmbed()
     .setColor("#0f4bff") 
-    .setAuthor(`Asukie™ - ${c.v}`, client.user.displayAvatarURL({ dynamic:true }))
-	.setDescription(`\n**Links Importantes:\n` +
+    .setAuthor(`${client.user.username} - ${c.v}`, client.user.displayAvatarURL({ dynamic:true }))
+	.setDescription(`**Olá ${message.author}, este aqui é o menu principal, todos meus sistemas e comandos estarão abaixo.**\n\n**Links Importantes:\n` +
   `<:BlueSeta_:765293754637877268> [Me adicione em seu servidor](https://discord.com/api/oauth2/authorize?client_id=749044223692767302&permissions=8&scope=bot)\n` +
   `<:BlueSeta_:765293754637877268> [Vote em mim no top.gg](https://top.gg/bot/749044223692767302)\n` +
   `<:BlueSeta_:765293754637877268> [Meu servidor de suporte](https://discord.gg/n5eNazJ)**`)
-	  .addField(`Opções:`, `**<a:um_:765292155165868092> | Administração\n` +
+	  .addField(`Defesa e Segurança:`, `**<a:um_:765292155165868092> | Administração\n` +
     `<a:dois_:765292512674971739> | Moderação \n` +
     `<a:tres_:765292551313162310> | Configuração \n` +
 		`<a:quatro_:765292583273889832> | Interação\n` +
     `<a:cinco_:765292618275749889> | Utilidades**`)
-    .setFooter(`Página 0 de 5 | Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
+    .setFooter(`Comando requisitado por: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
 	.setThumbnail(client.user.displayAvatarURL({ dynamic:true }))
 .setImage('https://i.imgur.com/rYKyIXl.png')
 
@@ -29,7 +29,7 @@ message.delete();
 
       let administracao = new Discord.MessageEmbed()
 	 .setColor("#0f4bff") 
-     .setAuthor('Administração', client.user.displayAvatarURL({ dynamic:true }))
+     .setAuthor(`${client.user.username} - Administração`, client.user.displayAvatarURL({ dynamic:true }))
      .setDescription(`<a:gatinho_:763776921326190655>**·Prefixo:** \`${c.prefix}\`\n` +
 	 `\n<:SetaZu:765288356913086484> **Addemoji** - Adicione algum emoji dentro do servidor\n` +
 	 `<:SetaZu:765288356913086484> **Addcargo** - Adicione um cargo, em algum usuário.\n` +
@@ -51,7 +51,7 @@ message.delete();
 
       let moderacao = new Discord.MessageEmbed()
 	 .setColor("#0f4bff") 
-     .setAuthor('Moderação', client.user.displayAvatarURL({ dynamic:true }))
+     .setAuthor(`${client.user.username} - Moderação`, client.user.displayAvatarURL({ dynamic:true }))
      .setDescription(`<a:gatinho_:763776921326190655>**·Prefixo:** \`${c.prefix}\`\n` +
 `\n<:SetaZu:765288356913086484> **Clear** - Limpe um chat de 2 a 100 mensagem.\n` +
 `<:SetaZu:765288356913086484> **Lock** - Tranque algum chat, para os membros não falar.\n` +
@@ -77,7 +77,7 @@ message.delete();
 
       let configuracao = new Discord.MessageEmbed()
      	 .setColor("#0f4bff") 
-     .setAuthor('Configuração', client.user.displayAvatarURL({ dynamic:true }))
+     .setAuthor(`${client.user.username} - Configuração`, client.user.displayAvatarURL({ dynamic:true }))
      .setDescription(`<a:gatinho_:763776921326190655>**·Prefixo:** \`${c.prefix}\`\n` +
  `\n<:SetaZu:765288356913086484> **Defesa** - Deixe seu servidor muito mas seguro.\n` +
  `<:SetaZu:765288356913086484> **Autorole** - Ative autorole dos bots e membros.\n` +
@@ -140,7 +140,7 @@ message.delete();
 
       let utilidade = new Discord.MessageEmbed()
      	 .setColor("#0f4bff") 
-     .setAuthor('Utilidade', client.user.displayAvatarURL({ dynamic:true }))
+     .setAuthor('Administração', client.user.displayAvatarURL({ dynamic:true }))
      .setDescription(`<a:gatinho_:763776921326190655>**·Prefixo:** \`${c.prefix}\`\n` +
      `<:SetaZu:765288356913086484> **Mcskin** - É um comando pra você conseguir a skin de alguma conta do Minecraft.\n` +
      `<:SetaZu:765288356913086484> **Mchead** - É um comando pra você conseguir a Cabeça de alguma conta do Minecraft.\n` +    

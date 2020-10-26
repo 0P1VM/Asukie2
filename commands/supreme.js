@@ -20,7 +20,9 @@ module.exports = {
 .setThumbnail('https://i.pinimg.com/originals/91/de/b5/91deb532d34761aaf73e43c758dc5446.png')
 .setColor(`#0f4bff`)
       
-     return message.channel.send(mnt)
+     return message.channel.send(mnt).then(m => {
+m.delete({timeout: 20000})
+})
       
     } 
     
@@ -34,7 +36,9 @@ module.exports = {
                 message.channel.send('<a:loading:753391174202425364> **|** Processando...').then(m => {m.delete({timeout: 3000})
 		const image = `https://api.alexflipnote.dev/supreme?text=${args.join('%20')}`;
 		const attachment = new Discord.MessageAttachment(image, 'supreme.png');
-		message.channel.send(attachment);
+		message.channel.send(attachment).then(m => {
+m.delete({timeout: 20000})
+})
 	},
 )}
                                                                                                  }

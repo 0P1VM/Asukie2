@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const request = require("request");
 const db = require('quick.db');
 const dbm = require('mongoose')
+const cooldownMap = new Map();
 var blockedUsers = ['729854282521903165', '348202483098583052'];
 
 client.on("message", async message => {
@@ -25,15 +26,18 @@ if (blockedUsers.includes(message.author.id) || (message.author.bot)) return mes
     .slice(config.prefix.length)
     .split(/ +/g);
   const command = args.shift().toLowerCase();
+const logg = new Discord.WebhookClient('770083731520094208', 'jsbJe_k6H10iPBaXgr1Gb71S2fFfedv-RMw1TzGHLjUWawMSVEDn7k0nK-yf1pavPwhl')
 let cmdlog = new Discord.MessageEmbed()
 .setColor('#0f4bff')
-.setAuthor(`${client.user.username} | Log`, client.user.displayAvatarURL({dynamic: true}))
-.setDescription(`**<:Info_1:768615897891078164> Autor:** \`${message.author.tag}\` **/** \`${message.author.id}\`\n`+ 
-`\n<:ModulE:762729478757023834>  **Comando executado:** \`${config.prefix}${command}\``)
+.setAuthor(`${client.user.username} | Commands`, client.user.displayAvatarURL({dynamic:true}))
+.setThumbnail('https://cdn.discordapp.com/emojis/753979367360692274.png?v=1')
+.setDescription(`**<:Kali:758857635205742633> Autor:**\nㅤ<:blueseta2:770111511255056395> Nome: \`${message.author.tag}\`\nㅤ<:blueseta2:770111511255056395> ID: \`${message.author.id}\`\n`+ 
+ `**<:Info_3:768616100593270794> Servidor:**\nㅤ<:blueseta2:770111511255056395> Nome: \`${message.guild.name}\`\nㅤ<:blueseta2:770111511255056395> ID: \`${message.guild.id}\`\n` +
+ `ㅤ\nㅤㅤㅤ<:livro_asukie_7_muda_a_cor:770111800346804245> **Comando efetuado:**ㅤㅤㅤ\nㅤ\`\`\`md\n# ${config.prefix}${command} ${args}\`\`\``)
 .setFooter(`${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
 .setTimestamp()
 
- const canal = client.channels.cache.get('769739393140260874').send(cmdlog)
+logg.send(cmdlog)
   try {
     const commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, message, args);

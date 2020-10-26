@@ -44,7 +44,7 @@ module.exports = {
 		const embed = new Discord.MessageEmbed()
 			.setColor(role.hexColor)
       .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
-			.setTitle(`${role.name} | Informações`)
+      .setTitle("Asukie™ | RoleInfo")
 			.addField('Role Nome', `\`${role.name}\``, true)
 		  .addField('Role ID', `\`${role.id}\``, true)
 			.addField('Hex Cor', `\`${role.hexColor.toUpperCase()}\``)

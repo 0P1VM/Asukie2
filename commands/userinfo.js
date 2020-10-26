@@ -50,6 +50,6 @@ let userinfo = new Discord.MessageEmbed()
 
 
 message.channel.send(userinfo).then(m => {
-      m.delete({ timeout: 15000 });
-    });
+m.delete({timeout: 20000})
+})
 }

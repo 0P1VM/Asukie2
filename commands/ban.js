@@ -22,8 +22,8 @@ var manutenção = await db.get(`manutenção`)
  let aliases = new Discord.MessageEmbed()
 .setAuthor(`Comando inválido | ${client.user.username}`, 'https://images-ext-1.discordapp.net/external/68qa_JhFyKLs4CPQn5ZI3ECElC2W-jjeJGh5DxtOrgw/%3Fv%3D1/https/cdn.discordapp.com/emojis/766406396337193020.png?width=104&height=104')
 .setDescription(`<:SetaZu:765288356913086484> Comando: **${c.prefix}ban**\n` +
-`<:SetaZu:765288356913086484> Exemplo: **${c.prefix}punir **@**usuario Quebrou as regras!**\n` +
-`<:BlueSeta_:765293754637877268> Aliases: **${c.prefix}ban**\n` +
+`<:SetaZu:765288356913086484> Exemplo: **${c.prefix}ban **@**usuario Quebrou as regras!**\n` +
+`<:BlueSeta_:765293754637877268> Aliases: **${c.prefix}punir**\n` +
 `ㅤ\n` +
 `<:SetaZu:765288356913086484> **Descrição:**\n` +
 `Utilize para banir um usuário mencionado\n` +
@@ -33,7 +33,7 @@ var manutenção = await db.get(`manutenção`)
 .setColor('#0f4bff')
   let perm = new Discord.MessageEmbed()
     .setDescription(
-      `<a:Asukie_Errado:767937012287537163> **| Você não tem permissão para punir este usuário.**`
+      `<a:Asukie_Errado:767937012287537163> **| Você não tem permissão para banir este usuário.**`
     )
     .setColor(`#0f4bff`)
     .setFooter(
@@ -87,7 +87,7 @@ let unkn = new Discord.MessageEmbed()
     });
 
         if (membro.id === message.guild.ownerID) {
-            message.channel.send('<a:Asukie_Errado:767937012287537163> **|** Você não pode punir o usuário com a posse do servidor, bobinho.').then(m => {
+            message.channel.send('<a:Asukie_Errado:767937012287537163> **|** Você não pode banir o usuário com a posse do servidor, bobinho.').then(m => {
       m.delete({ timeout: 9000 });
     });
             return 0;

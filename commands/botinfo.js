@@ -88,7 +88,9 @@ var manutenção = await db.get(`manutenção`)
    .setImage(`https://i.imgur.com/yCNblD0.png`)
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
   
-   message.channel.send(embed)
+   message.channel.send(embed).then(m => {
+m.delete({timeout: 25000})
+})
 
             })
            }
