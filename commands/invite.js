@@ -1,8 +1,8 @@
 const Discord = require('discord.js')
-
+const db = require('quick.db')
 exports.run = async (client, message) => {
 message.delete();
-
+  
     let embed1 = new Discord.MessageEmbed()
     .setColor('#0f4bff')
     .setAuthor(`${client.user.username} | Invite`, client.user.displayAvatarURL({dynamic: true}))
