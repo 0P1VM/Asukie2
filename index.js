@@ -94,7 +94,7 @@ iniciado.send(inc)
 var tabela = [
     {
     name: `Halloween 🎃`,
-     type: "WATCHING",
+     type: "STREAMING",
      url: "https://www.twitch.tv/asukie"
     },
     {
