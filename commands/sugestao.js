@@ -32,15 +32,15 @@ m.delete({timeout: 20000})
     }
 
     const embed = new Discord.MessageEmbed()
-        .setAuthor(`Asukie | Sugestão`)
+        .setAuthor(`Asukie™ | Sugestão`)
        .setColor("#0f4bff")
         .addField("Usuário", `${message.author}`)
-       .addField("Bug", `${mensg}`)
+       .addField("Sugestão", `${mensg}`)
        .addField("Usuário ID", `\`${message.author.id}\``)
        .addField("Servidor ID", `\`${message.guild.id}\``)
         .setThumbnail("https://cdn.discordapp.com/attachments/759155689733226517/769770643130417163/AsukieSugestao.png")
         .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
-    client.channels.cache.get(`769695949928792074`).send(embed)
+    client.channels.cache.get(`769695709250191390`).send(embed)
         .then(function (msg) {
             msg.react("✅");
             msg.react("❌"); 

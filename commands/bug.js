@@ -17,7 +17,7 @@ module.exports = {
                                                     
     
     let embed = new MessageEmbed()
-    .setTitle('Asukie | Bug')
+    .setTitle('Asukie™ | Bug')
     .setThumbnail('https://cdn.discordapp.com/emojis/766792320292487191.png?v=1')
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
     .setColor("#0f4bff")

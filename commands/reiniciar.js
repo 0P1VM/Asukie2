@@ -5,7 +5,8 @@ module.exports.run = async (client, message, args) => {
   
 var owner = [
 "268403900355313674", 
-"719944880800923690"
+"719944880800923690",
+"752954404986159275"
 ]; 
     if (message.author.id === owner) {
         message.channel.send(`<a:Asukie_Certo:766437760381878282> | Ok, ${message.author}, Iniciando processo de reiniciação....`).then(m => {

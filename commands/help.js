@@ -8,22 +8,22 @@ message.delete();
     .setColor("#0f4bff") 
     .setAuthor(`${client.user.username} - ${c.v}`, client.user.displayAvatarURL({ dynamic:true }))
 	.setDescription(`**Olá ${message.author}, este aqui é o menu principal, todos meus sistemas e comandos estarão abaixo.**\n\n**Links Importantes:\n` +
-  `<:BlueSeta_:765293754637877268> [Me adicione em seu servidor](https://discord.com/api/oauth2/authorize?client_id=749044223692767302&permissions=8&scope=bot)\n` +
-  `<:BlueSeta_:765293754637877268> [Vote em mim no top.gg](https://top.gg/bot/749044223692767302)\n` +
-  `<:BlueSeta_:765293754637877268> [Meu servidor de suporte](https://discord.gg/n5eNazJ)**`)
-	  .addField(`Defesa e Segurança:`, `**<a:um_:765292155165868092> | Administração\n` +
-    `<a:dois_:765292512674971739> | Moderação \n` +
-    `<a:tres_:765292551313162310> | Configuração**`, true)
- .addField(`Opções:`, `**<a:quatro_:765292583273889832> | Interação\n` +
-    `<a:cinco_:765292618275749889> | Utilidades**`, true)
-    .setFooter(`Comando requisitado por: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
+  `<:AsukieSeta0:770338265969459201> [Me adicione em seu servidor](https://discord.com/api/oauth2/authorize?client_id=749044223692767302&permissions=8&scope=bot)\n` +
+  `<:AsukieSeta0:770338265969459201> [Vote em mim no top.gg](https://top.gg/bot/749044223692767302)\n` +
+  `<:AsukieSeta0:770338265969459201> [Meu servidor de suporte](https://discord.gg/n5eNazJ)**`)
+	  .addField(`Defesa e Segurança:`, `**<:AsukieNumber1:770407285485731900> | Administração\n` +
+    `<:AsukieNumber2:770407770633142323> | Moderação \n` +
+    `<:AsukieNumber3:770407825116495892> | Configuração**`, true)
+ .addField(`Opções:`, `**<:AsukieNumber4:770407869552001035> | Interação\n` +
+    `<:AsukieNumber5:770407927885987841> | Utilidades**`, true)
+    .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
 	.setThumbnail('https://media.discordapp.net/attachments/759155689733226517/770125872229253150/660973379037298696.png')
 .setImage('https://i.imgur.com/rYKyIXl.png')
 
      message.channel.send(painel).then(msg => {
-       msg.react('765294346723262474').then(() => msg.react('765292155165868092')).then(() => msg.react('765292512674971739')).then(() => msg.react('765292551313162310')).then(() => msg.react('765292583273889832')).then(() => msg.react('765292618275749889'))
+       msg.react('770334996246167573').then(() => msg.react('770407285485731900')).then(() => msg.react('770407770633142323')).then(() => msg.react('770407825116495892')).then(() => msg.react('770407869552001035')).then(() => msg.react('770407927885987841'))
        
-      let adm = (reaction, usuario) => reaction.emoji.id === "765292155165868092" && usuario.id === message.author.id;
+      let adm = (reaction, usuario) => reaction.emoji.id === "770407285485731900" && usuario.id === message.author.id;
       let coletor = msg.createReactionCollector(adm);
 
       let administracao = new Discord.MessageEmbed()
@@ -45,7 +45,7 @@ message.delete();
      
      })
 
-      let mod = (reaction, usuario) => reaction.emoji.id=== "765292512674971739" && usuario.id === message.author.id;
+      let mod = (reaction, usuario) => reaction.emoji.id=== "770407770633142323" && usuario.id === message.author.id;
       let coletor2 = msg.createReactionCollector(mod);
 
       let moderacao = new Discord.MessageEmbed()
@@ -71,7 +71,7 @@ message.delete();
      cp.users.remove(message.author.id)
      })
 
-      let config = (reaction, usuario) => reaction.emoji.id === "765292551313162310" && usuario.id === message.author.id;
+      let config = (reaction, usuario) => reaction.emoji.id === "770407825116495892" && usuario.id === message.author.id;
       let coletor3 = msg.createReactionCollector(config);
 
       let configuracao = new Discord.MessageEmbed()
@@ -94,7 +94,7 @@ message.delete();
      cp.users.remove(message.author.id)
       })
 
-      let int = (reaction, usuario) => reaction.emoji.id === "765292583273889832" && usuario.id === message.author.id;
+      let int = (reaction, usuario) => reaction.emoji.id === "770407869552001035" && usuario.id === message.author.id;
       let coletor4 = msg.createReactionCollector(int);
 
       let interacao = new Discord.MessageEmbed()
@@ -132,7 +132,7 @@ message.delete();
      cp.users.remove(message.author.id)
      })
 
-      let uti = (reaction, usuario) => reaction.emoji.id === "765292618275749889" && usuario.id === message.author.id;
+      let uti = (reaction, usuario) => reaction.emoji.id === "770407927885987841" && usuario.id === message.author.id;
       let coletor5 = msg.createReactionCollector(uti);
 
       let utilidade = new Discord.MessageEmbed()
@@ -166,7 +166,7 @@ message.delete();
      cp.users.remove(message.author.id)
      })
 
-     let ini = (reaction, usuario) => reaction.emoji.id === "765294346723262474" && usuario.id === message.author.id;
+     let ini = (reaction, usuario) => reaction.emoji.id === "770334996246167573" && usuario.id === message.author.id;
      let coletor6 = msg.createReactionCollector(ini);
       coletor6.on("collect", cp => {
 

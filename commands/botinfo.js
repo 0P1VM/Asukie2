@@ -8,7 +8,7 @@ const db = require('quick.db')
 moment.locale('pt-BR')
 
 exports.run = async (client, message, args) => {
-
+message.delete();
 var manutenção = await db.get(`manutenção`)
   
     if(!manutenção === true){
