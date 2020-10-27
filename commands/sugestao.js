@@ -38,7 +38,7 @@ m.delete({timeout: 20000})
        .addField("Sugestão", `${mensg}`)
        .addField("Usuário ID", `\`${message.author.id}\``)
        .addField("Servidor ID", `\`${message.guild.id}\``)
-        .setThumbnail("https://cdn.discordapp.com/attachments/759155689733226517/769770643130417163/AsukieSugestao.png")
+        .setThumbnail("https://cdn.discordapp.com/attachments/759155689733226517/770482302866292806/AsukieSugestao.png")
         .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({ dynamic:true }))
     client.channels.cache.get(`769695709250191390`).send(embed)
         .then(function (msg) {
