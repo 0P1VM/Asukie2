@@ -41,11 +41,12 @@ var manutenção = await db.get(`manutenção`)
   
     let embed = new Discord.MessageEmbed()
     
+    .setTitle('Asukie™ | Dúvida')
     .addField(`**Dúvida**`, `${duvida}`)
     .addField(`Resposta`, `${replies [result]}`)
     .setColor('#0f4bff')
     .setFooter(`Requisitado: ${message.author.username}`, message.author.displayAvatarURL({dynamic: true}))
-    .setThumbnail('https://cdn.discordapp.com/attachments/759155689733226517/769740255577505862/AsukieDuvida.png')
+    .setThumbnail('https://cdn.discordapp.com/attachments/759155689733226517/770693599830212659/AsukieDuvida.png')
     
     message.channel.send(embed)
 }

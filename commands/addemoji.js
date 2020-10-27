@@ -38,7 +38,7 @@ m.delete({timeout: 20000})
     })
   } catch(error) {
             console.log(error);
-message.channel.send('Maximum number of emojis reached (50)').then(m => {
+message.channel.send('<:Asukie_atencao:766406396337193020> **|** Maximum number of emojis reached (50)').then(m => {
 m.delete({timeout: 20000})
 })
         };

@@ -5,8 +5,7 @@ const request = require("request");
 const db = require('quick.db');
 const dbm = require('mongoose')
 const bl = require('./utils/blacklist.json')
-const cooldowns = new Discord.Collection();
-var blockedUsers = ['729854282521903165', '348202483098583052'];
+const cooldowns = new Discord.Collection()
 
 client.on("message", async message => {
   if (message.author.bot) return;
@@ -18,7 +17,6 @@ client.on("message", async message => {
   )
     return;
 
-if (bl.bl.includes(message.author.id) || (message.author.bot)) return message.delete();
   let embed = new Discord.MessageEmbed()
   .setDescription(`<:Asukie_atencao:766406396337193020> **|** O comando não existe, utilize \`${config.prefix}ajuda\` para mais informações.`)
   .setColor("#0f4bff")
@@ -33,7 +31,7 @@ if (!cooldowns.has(command.name)) {
 
   const now = Date.now();
   const timestamps = cooldowns.get(command.name);
-  const cooldownAmount = (command.cooldown || 2) * 1000;
+  const cooldownAmount = (command.cooldown || 3) * 1000;
 
   if (timestamps.has(message.author.id)) {
     const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
@@ -90,6 +88,7 @@ client.on("ready", async () => {
 .setFooter(`${client.user.tag}`, client.user.displayAvatarURL({dynamic: true}))
 .setTimestamp()
 iniciado.send(inc)
+
   console.log(`Iniciado em ${client.user.tag}\n\n`)
 var tabela = [
     {
@@ -157,7 +156,6 @@ client.on('message', message => {
         message.channel.send(`${message.author}`, marcou)
       }
     })
-
 
 
 client.login(config.token);

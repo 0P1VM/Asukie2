@@ -4,8 +4,10 @@ const db = require('quick.db')
 const cor = require('../utils/cor.json')
 exports.run = async (client, message, args) => {
 message.delete().catch(()=>{});
-    var user = message.mentions.users.first();
-    if (!user) user = message.author;
+
+    var user = message.author;
+    var userId = message.author.id;
+    var userInvites = message.guild.fetchInvites().then(invites => invites.find(invite => invite.inviter.id === userId));
     var targetInvites = await message.guild.fetchInvites().catch(()=>{});
     if (!targetInvites) return;
     var invitesUses = 0;
