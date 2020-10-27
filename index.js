@@ -92,31 +92,31 @@ client.on("ready", async () => {
 iniciado.send(inc)
   console.log(`Iniciado em ${client.user.tag}\n\n`)
 var tabela = [
-  {
-      name: `Halloween 🎃`,
-      type: "WATCHING",
-      url: "https://www.twitch.tv/asukie"
+    {
+    name: `Halloween 🎃`,
+     type: "WATCHING",
+     url: "https://www.twitch.tv/asukie"
     },
     {
-      name: `Saiba como me adicionar pelo ${config.prefix}invite`,
-      type: "STREAMING",
-      url: "https://www.twitch.tv/asukie"
-    },
-	{
+    name: `Saiba como me adicionar pelo ${config.prefix}invite`,
+    type: "STREAMING",
+    url: "https://www.twitch.tv/asukie"
+   },
+	 {
 		name: `Encontrou falhas? utilize o comando ${config.prefix}bug`,
-		type: "PLAYING",
+		type: "STREAMING",
 		url: "https://www.twitch.tv/asukie"
-	},
-{
-   name: `Dúvidas ? • ${config.prefix}ajuda e veja os meus comandos.`,
+	 },
+   {
+   name: `Dúvidas? ${config.prefix}ajuda e veja os meus comandos.`,
    type: "STREAMING",
    url: "https://www.twitch.tv/asukie"
-},
-	{
+   },
+	 {
 		name: `${client.guilds.cache.size} Servidores! Obrigado a todos por me adicionarem 💙`,
 		type: "LISTENING",
 		url: "https://www.twitch.tv/asukie"
-	},
+	 },
   {
 		name: `Alguma sugestão? utilize o comando ${config.prefix}sugestao`,
 		type: "LISTENING",
